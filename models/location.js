@@ -1,31 +1,27 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create sports model
-class sports extends Model {}
+// create location model
+class location extends Model {}
 
-// create fields/columns for sports model
-sports.init(
+// create fields/columns for location model
+location.init(
     {
-        sport: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        requiredParticipants: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        description: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        equipmentNeeded: {
+        address: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        hours: {
             type: DataTypes.STRING,
             allowNull: false
         }
@@ -34,9 +30,8 @@ sports.init(
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'sports'
-
-    }    
+      modelName: 'location'
+    }
 );
 
-module.exports = sports;
+module.exports = location;

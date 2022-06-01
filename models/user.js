@@ -1,13 +1,21 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-User.init(
+// create user model
+class user extends Model {}
+
+// fields/columns for user model
+user.init(
     {
       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
+      },
+      birthdate: {
+          type: DataTypes.STRING,
+          allowNull: false,
       },
       username: {
         type: DataTypes.STRING,
@@ -38,4 +46,4 @@ User.init(
     }
   );
 
-  module.exports = User;
+  module.exports = user;
