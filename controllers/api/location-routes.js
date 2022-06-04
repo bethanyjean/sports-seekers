@@ -14,10 +14,9 @@ router.get('/', (req, res) => {
     });
 });
 //Creates locations for the Richmond area 
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
     location.create({
-      id: req.body.id,
-      name: req.session.name,
+      name: req.body.name,
       address: req.body.address,
       hours: req.body.hours
     })
