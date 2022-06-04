@@ -13,6 +13,10 @@ sports.init(
             primaryKey: true,
             autoIncrement: true
         },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         requiredParticipants: {
             type: DataTypes.INTEGER,
             allowNull: false

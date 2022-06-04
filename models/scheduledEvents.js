@@ -33,11 +33,16 @@ scheduledEvents.init(
                 model: 'sports',
                 key: 'id'
             },
-            date: {
-                type: DataTypes.STRING,
-                allowNull: false
-            }
-        }
+        },
+        date: {
+            type: DataTypes.DATE,
+            allowNull: false
+            
+        },
+        time: {
+            type:DataTypes.TIME,
+            allowNull: false
+        },
     },
     {
         sequelize,
