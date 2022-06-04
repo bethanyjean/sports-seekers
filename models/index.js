@@ -34,22 +34,6 @@ scheduledEvents.belongsTo(sports, {
     foreignKey: 'sports_id'
 });
 
-user.hasMany(scheduledParticipants, {
-    foreignKey: 'user_id'
-});
-
-scheduledParticipants.hasMany(user, {
-    foreignKey: 'scheduledParticipants_id'
-});
-
-scheduledEvents.hasMany(scheduledParticipants, {
-    foreignKey: 'scheduledEvents_id'
-});
-
-scheduledParticipants.hasMany(scheduledEvents, {
-    foreignKey: 'scheduledParticipants_id'
-});
-
 user.belongsToMany(scheduledEvents, {
     through: scheduledParticipants,
     foreignKey: 'user_id',
@@ -61,6 +45,26 @@ scheduledEvents.belongsToMany(user, {
     foreignKey: 'scheduledEvents_id',
     onDelete: 'SET NULL'
 });
+
+user.hasMany(scheduledParticipants, {
+    foreignKey: 'user_id'
+});
+
+scheduledParticipants.hasMany(user, {
+    foreignKey: 'scheduledParticipants_id',
+    onDelete: 'SET NULL'
+});
+
+scheduledEvents.hasMany(scheduledParticipants, {
+    foreignKey: 'scheduledEvents_id',
+    onDelete: 'SET NULL'
+});
+
+scheduledParticipants.hasMany(scheduledEvents, {
+    foreignKey: 'scheduledParticipants_id',
+    onDelete: 'SET NULL'
+});
+
 
 sports.hasMany(locationSport, {
     foreignKey: 'sports_id'

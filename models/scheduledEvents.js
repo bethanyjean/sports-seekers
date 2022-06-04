@@ -20,15 +20,15 @@ scheduledEvents.init(
                 key: 'id'
             }
         },
-        locationId: {
-            type: DataTypes.STRING,
+        location_id: {
+            type: DataTypes.INTEGER,
             references: {
                 model: 'location',
                 key: 'id'
             }
         },
-        sportsId: {
-            type: DataTypes.STRING,
+        sports_id: {
+            type: DataTypes.INTEGER,
             references: {
                 model: 'sports',
                 key: 'id'

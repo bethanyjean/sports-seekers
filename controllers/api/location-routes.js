@@ -18,7 +18,7 @@ router.post('/', withAuth, (req, res) => {
     location.create({
       id: req.body.id,
       name: req.session.name,
-      address: req.body.hours,
+      address: req.body.address,
       hours: req.body.hours
     })
       .then(dblocationdata => res.json(dblocationdata))
