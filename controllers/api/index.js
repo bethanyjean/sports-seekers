@@ -10,7 +10,7 @@ const locationRoutes = require('./location-routes');
 router.use('/location', locationRoutes);
 // router.use('./locationSport', locationsportsRoutes);
 // router.use('./scheduledEvents', scheduledeventsRoutes);
-// router.use('./scheduledParticipants', scheduledPaticipants);
+// router.use('./scheduledParticipants', scheduledPaticipantsRoutes);
 // router.use('./sports', sportsRoutes);
 
 
