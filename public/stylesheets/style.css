@@ -92,64 +92,6 @@ header {
 	text-align: center;
 }
 
-/*	Search Box Start
-    ==================================================*/
-
-.search-box input {
-	outline: none;
-	border:none;
-	font-size: 12px;
-	padding: 5px;
-	height: 25px;
-}
-.search-box button {
-	height: 25px;
-	background: url("../images/search.png") no-repeat;
-	background-color: #fff;
-	padding:10px 16px;
-	background-position: 8px;
-	border: 0;
-	outline: 0;
-}
-.search-box label {
-	display: none;
-}
-.cart .dropdown {
-	padding: 10px;
-	
-}
-.cart .dropup .caret {
-	margin-top: -36px;
-	margin-left: -130px;
-	text-align: left;
-	border-bottom: 4px solid #FFF;
-}
-.cart .dropdown-menu {
-	text-align: center;
-	width: 220px;
-	margin-top: 7px;
-}
-.cart .dropdown-cart-body {
-	margin: 0 0 15px 0;
-}
-.cart .dropdown-menu img {
-	border: 1px solid #dedede;
-	border-radius:100%;
-	height: 64px;
-	width: 64px;
-	margin-left: 10px;
-	padding: 8px;
-}
-.cart .dropdown-menu h6 {
-	margin-top: 20px;
-}
-.cart .dropdown-menu h6 span {
-	color: #033069;
-}
-.cart .dropdown-menu button {
-	margin: 15px 0;
-}
-
 
 
 /*	Login Modal Start
@@ -456,27 +398,27 @@ header {
 	color: #121212;
 }
 
-/*	 New Products Start
+/*	 New Events Start
     ==================================================*/
 
 
-.products-heading {
+.events-heading {
 	margin-top: 20px;
 	background: url("../images/titleBorder.png");
 	background-repeat: repeat-x;
 }
-.products-heading h2 {
+.events-heading h2 {
 	margin: 0px 0 20px ;
 	border-top: 5px solid #033069;
 	display: inline-block;
 }
-.products {
+.events {
 	text-align: center;
 	margin-bottom: 65px;
 	cursor: pointer;
 }
 
-.products a img {
+.events a img {
 	width: 100%;
 	border: 1px solid #dedede;
 	-webkit-transition: 0.3s ease-in-out;
@@ -485,14 +427,14 @@ header {
 	-o-transition: 0.3s ease-in-out;
 	transition: 0.3s ease-in-out;
 }
-.products:hover a img{
+.events:hover a img{
 	opacity: 0.7;
 	border: 1px solid #033069;
 }
-.products:hover h4 {
+.events:hover h4 {
 	color: #033069;
 }
-.products a h4 {
+.events a h4 {
 	margin-top: 14px;
 	-webkit-transition: 0.2s ease-in-out;
 	-moz-transition: 0.2s ease-in-out;
@@ -500,10 +442,10 @@ header {
 	-o-transition: 0.2s ease-in-out;
 	transition: 0.2s ease-in-out;
 }
-.products a h4:hover {
+.events a h4:hover {
 	color: #033069;
 }
-#products + section{ 
+#events + section{ 
 	margin-top: 20px;
 	margin-bottom: 30px;
 }
@@ -531,19 +473,12 @@ header {
 	-o-transition: .2s ease-in-out;
 	transition: .2s ease-in-out;
 }
-.price {
+.participation {
 	font-size: 22px;
 	color: #033069;
 	font-weight: bold;
 	margin-bottom: 8px;
 }
-
-
-
-
-/*	 Call To Action Start
-    ==================================================*/
-
 
 
 
@@ -605,70 +540,6 @@ footer .block span {
 .copyright-text a:hover {
 	text-decoration: underline;
 }
-
-
-/*	Social Icon Start
-    ==================================================*/
-
-
-.social-icon li {
-	float: left;
-	margin-right: 8px;
-}
-.social-icon li a i {
-	color: #fff;
-	font-size: 20px;
-}
-.social-icon li a {
-	padding: 8px;
-	background: #033069;
-	display: inline-block;
-}
-.facebook-icon .fa-facebook {
-	padding: 0px 7px;
-}
-.facebook-icon:hover {
-	background: #4965a0;
-}
-.twitter-icon:hover {
-	background: #3bc1ed;
-}
-.pinterest-icon:hover {
-	background: #d02128;
-}
-.linkedin-icon:hover {
-	background: #1d87be;
-}
-.twitter-icon:hover {
-	background: #3bc1ed;
-}
-.plus-icon:hover {
-	background: #dd4b39;
-}
-
-/*----------------Cash Out--------------------*/
-
-.cash-out {
-	padding: 0;
-	margin-bottom: 0px;
-}
-.cash-out li {
-	float: left;
-}
-.cash-out li a {
-	padding-right: 10px;
-}
-.cash-out li a img {
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
-	-ms-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-}
-.cash-out li a img:hover {
-	opacity: 0.7;
-}
-
 
 
 
@@ -774,448 +645,3 @@ footer .block span {
 
 /*	End Of Home Page.......
     ==================================================*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*	Blog Page Start.......
-    ==================================================*/
-
-
-
-#topic-header {
-	background: #FCFCFC;
-	width: 100%;
-	padding: 20px 0;
-	margin: -20px 0;
-}
-#topic-header h1,#topic-header p {
-	margin: 0;
-}
-#topic-header .breadcrumb {
-	background: transparent;
-	padding: 30px 0 0;
-}
-#topic-header .breadcrumb li a {
-	color: #033069;
-}
-
-
-#blog {
-	margin-bottom: 50px;
-}
-.blog-body .block {
-	border: 1px solid #dedede;
-	box-shadow: 0 0 3px #C4C4C4;
-	padding: 5px;
-}
-
-
-.blog-body .block img {
-	width: 100%;
-}
-.blog-text {
-	padding: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
- 
-#blog .blog-zone {
-    margin: 30px 0 0 0;
-    position: relative;
-} 
- 
-/* The line */
-#blog .blog-zone:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 6px;
-    background: #c7e488;
-    left: 1%;
-    margin-left: -8px;
-}
- 
-#blog .blog-zone > li {
-    position: relative;
-}
- 
-/* The date/time */
-#blog .blog-zone > li .cbp_tmtime {
-    display: block;
-    width: 25%;
-    padding-right: 100px;
-    position: absolute;
-}
- 
-#blog .blog-zone > li .cbp_tmtime span {
-    display: block;
-    text-align: right;
-}
- 
-#blog .blog-zone > li .cbp_tmtime span:first-child {
-    font-size: 0.9em;
-    color: #bdd0db;
-}
- 
-#blog .blog-zone > li .cbp_tmtime span:last-child {
-    font-size: 2.9em;
-    color: #033069;
-}
- 
-
- 
-/* Right content */
-#blog .blog-zone > li .blog-box {
-    margin: 0 0 30px 8%;
-    background: #fff;
-    border: 1px solid #dedede;
-    color: #fff;
-    padding: 8px;
-    font-size: 1.2em;
-    font-weight: 300;
-    line-height: 1.4;
-    position: relative;
-    border-radius: 2px;
-}
- 
-#blog .blog-zone > li:nth-child(odd) .blog-box {
-    background: #fff;
-    border: 1px solid #dedede;
-}
- 
- 
-
- 
-#blog .blog-zone > li:nth-child(odd) .blog-box:after {
-    border-right-color: #033069;
-}
- 
-/* The icons */
-#blog .blog-zone > li .blog-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.4em;
-    line-height: 40px;
-    position: absolute;
-    color: #fff;
-    background: #033069;
-    border-radius: 50%;
-    box-shadow: 0 0 0 8px #C7E488;
-    text-align: center;
-    left: 1%;
-    top: 0;
-    margin: 0 0 0 -25px;
-}
-
- 
-
-
-
-.blog-box img {
-		width: 100%;
-}
-.blog-box p {
-	color: #666;
-}
-.blog-post-tag {
-	background: #eee;
-	padding-left: 17px;
-	border-left: 3px solid #90c222;
-}
-.blog-post-tag .block i {
-	color: #033069;
-}
-.blog-post-tag .block p{
-	display: inline-block;
-	color: #999;
-	font-size: 14px;
-}
-.blog-post-tag .block p a {
-	color: #999;
-}
-.blog-post-tag .block {
-	margin-right: 10px;
-	display: inline-block;
-}
-.blog-post-body {
-	padding: 15px;
-}
-.blog-post-body a h2 {
-	color: #033069;
-	margin-bottom: 20px;
-}
-.blog-post-body p {
-	font-size: 16px;
-	color: #555;
-	padding-top: 10px;
-}
-#blog .pagination>.active>a {
-	background: #033069;
-	border-color: #033069;
-	color: #fff;
-}
-#blog .pagination>li>a {
-	color: #333;
-}
-#blog .blog-zone > li:last-child .blog-box {
-	margin-bottom: 0;
-}
-
-
-
-/*	Blog Single Page Start.......
-    ==================================================*/
-
-.blog-post-body blockquote {
-	font-size: 13px;
-	border-left: 5px solid #033069;
-	padding: 0 0 0 25px;
-	margin: 20px 0 20px 20px;
-	color: #AFAFAF;
-
-}
-.blog-post-body blockquote p {
-	color: #AFAFAF;
-	font-size: 18px;
-}
-
-.author-id ,.comments-box,.leave-comment  {
-	border: 1px solid #dedede;
-	margin-top: 30px;
-	padding:10px;
-}
-.author-id .media h4 {
-	margin: 0;
-}
-.author-id .media img ,.comments-box .media img{
-	width: 64px;
-	height: 64px;
-}
-.author-id .media-heading {
-	color: #555;
-}
-.author-id .media-body p {
-	color: #777;
-	font-size: 13px;
-
-}
-.author-id .media  h5 {
-	background: #EEE;
-	margin: 0 0 20px;
-	padding: 0 0 0 20px;
-	line-height: 38px;
-	color: #999;
-	text-shadow: 1px 1px 1px #FFF;
-}
-.comments-box .media-heading span,.comments-box .media-heading a {
-	font-style: italic;
-	font-size: 13px;
-	color: #033069;
-}
-.comments-box .media {
-	background: #f7f7f7;
-	padding:10px;
-	border-bottom: 3px solid #dedede;
-	color: #878787;
-}
-.comments-box .media-body {
-	padding: 0 20px;
-}
-.comments-box .reply {
-	margin-left: 75px;
-	border-bottom: none;
-}
-.leave-comment .form-group textarea {
-	resize:none;
-}
-
-/*-------- Blog Sidebar-------------*/
-
-.blog-sidebar .block {
-	margin-bottom: 50px;
-}
-.blog-sidebar .block .media-heading {
-	color: #666;
-	font-size: 17px;
-	display: block;
-	margin:0;
-	-webkit-transition: .2s ease-in-out;
-	-moz-transition: .2s ease-in-out;
-	-ms-transition: .2s ease-in-out;
-	-o-transition: .2s ease-in-out;
-	transition: .2s ease-in-out;
-}
-.blog-sidebar .block .media-heading:hover {
-	color: #033069;
-}
-.blog-sidebar .block .media-list {
-	padding-top: 10px;
-}
-.blog-sidebar .block .media-body p {
-	color: #777;
-	font-size: 13px;
-}
-.blog-sidebar .block .media a img {
-	width: 64px;
-	border-radius: 2px;
-}
-.blog-sidebar {
-	padding: 20px 0;
-}
-.blog-sidebar .block .list-group-item:first-child,
-.blog-sidebar .block .list-group-item:last-child  {
-	border-top-right-radius: 0px;
-	border-top-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	border-bottom-left-radius: 0px;
-}
-.blog-sidebar .block .list-group .list-group-item {
-	color: #333;
-	-webkit-transition: .2s ease-in-out;
-	-moz-transition: .2s ease-in-out;
-	-ms-transition: .2s ease-in-out;
-	-o-transition: .2s ease-in-out;
-	transition: .2s ease-in-out;
-}
-.blog-sidebar .block .list-group .list-group-item  i {
-	margin-right: 5px;
-}
-.blog-sidebar .block .list-group .list-group-item:hover {
-	background: #033069;
-	color: #fff;
-	padding-left: 20px;
-}
-
-
-
-/*-------- Tag-----------*/
-
-.tag-link h2 {
-	margin-top: 0px;
-	margin-bottom: 20px;
-}
-.tag-link a {
-	color: #fff;
-	background: #033069;
-	padding: 8px 10px;
-	display: inline-block;
-	margin-bottom: 5px;
-
-}
-.tag-link a:hover {
-	text-decoration: underline;
-}
-
-
-
-
-
-
-/*	Shop Page Start.......
-    ==================================================*/
-
-
- 
- 
-
-.product-grid ul {
-    text-align: center;
-}
- 
-.product-grid ul li {
-    width: 33%;
-    text-align: center;
-    padding: 10px 20px 0 0px;
-    display: inline-block;
-    vertical-align: top;
-}
- 
-@media screen and (max-width: 57em) {
-    .product-grid ul li {
-        width: 49%;
-    }
-}
-
-@media screen and (max-width: 40.125em) {
-    .product-grid ul li {
-        width: 100%;
-    }
-}
-
-
-#shop .products-heading h2 {
-	font-size: 30px;
-}
-.pagination-bottom {
-	text-align: center;
-}
-.pagination-bottom .pagination .active a {
-	background: #033069;
-	border:1px solid #033069;
-	color: #fff;
-}
-.pagination-bottom .pagination a {
-	color: #333;
-}
-
-/*	Shop Single Page Start.......
-    ==================================================*/
-#single-product .tab-content {
-	padding: 10px;
-	border-left:1px solid #dedede;
-	border-right:1px solid #dedede;
-	border-bottom:1px solid #dedede;
-
-}
-#single-product .nav-tabs {
-	margin-top:30px; 
-}
-#single-product  .nav-tabs .active a {
-	background: #033069;
-	color: #fff;
-}
-#single-product  .nav-tabs li a {
-	color: #333;
-	border-top:1px solid #dedede; 
-	border-left:1px solid #dedede; 
-	border-right:1px solid #dedede; 
-}
-.single-product-img {
-	border:1px solid #dedede;
-}
-.product-des {
-	border:1px solid #dedede;
-	padding:10px 15px;
-}
-.product-des .view-link {
-	background: #033069;
-	color: #fff;
-}
-.product-des .view-link i {
-	color: #fff;
-}
-.top-catagori-heading {
-	margin-top: 0;
-}
