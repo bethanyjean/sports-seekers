@@ -13,21 +13,27 @@ locationSport.init(
             primaryKey: true,
             autoIncrement: true
         },
-        locationId: {
-            type: DataTypes.STRING,
-            allowNull: false
+        sports_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'sports',
+                key: 'id'
+            }
         },
-        sportId: {
-            type: DataTypes.STRING,
-            allowNull: false
+        location_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'location',
+                key: 'id'
+            }
         }
     },
     {
-    sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'locationSport'
+        sequelize,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'locationSport'
     }
 );
 
-module.exports = 'locationSport';
+module.exports = locationSport;
