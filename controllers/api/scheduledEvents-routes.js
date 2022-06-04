@@ -9,6 +9,8 @@ router.get('/', (req, res) => {
     scheduledEvents.findAll({
         attributes: [
             'id',
+            'date',
+            'time',
           ],
           include: [
             {
@@ -17,7 +19,7 @@ router.get('/', (req, res) => {
             },
             {
               model: location,
-              attributes: ['username']
+              attributes: ['name']
             }
           ] 
     })
