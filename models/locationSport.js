@@ -13,15 +13,15 @@ locationSport.init(
             primaryKey: true,
             autoIncrement: true
         },
-        sportsId: {
-            type: DataTypes.STRING,
+        sports_id: {
+            type: DataTypes.INTEGER,
             references: {
                 model: 'sports',
                 key: 'id'
             }
         },
-        locationId: {
-            type: DataTypes.STRING,
+        location_id: {
+            type: DataTypes.INTEGER,
             references: {
                 model: 'location',
                 key: 'id'
@@ -36,4 +36,4 @@ locationSport.init(
     }
 );
 
-module.exports = 'locationSport';
+module.exports = locationSport;

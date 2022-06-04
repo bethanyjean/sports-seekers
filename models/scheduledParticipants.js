@@ -19,8 +19,8 @@ scheduledParticipants.init(
                 model: 'user',
                 key: 'id'
             },
-            scheduledEventsId: {
-                type: DataTypes.STRING,
+            scheduledEvents_id: {
+                type: DataTypes.INTEGER,
                 references: {
                     model: 'scheduledEvents',
                     key: 'id'
