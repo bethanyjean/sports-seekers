@@ -13,10 +13,10 @@ user.init(
         primaryKey: true,
         autoIncrement: true
       },
-      birthdate: {
-          type: DataTypes.STRING,
-          allowNull: false,
-      },
+      // birthdate: {
+      //     type: DataTypes.STRING,
+      //     allowNull: false,
+      // },
       username: {
         type: DataTypes.STRING,
         allowNull: false
