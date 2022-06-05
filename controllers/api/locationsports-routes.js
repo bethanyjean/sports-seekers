@@ -26,25 +26,25 @@ router.post('/', (req, res) => {
         res.status(400).json(err);
       });
   });
-  //Deletes locationSport 
-  router.delete('/:id', (req, res) => {
-    locationSport.destroy({
-      where: {
-        id: req.params.id
-      }
-    })
-      .then(dblocationSportdata => {
-        if (!dblocationSportdata) {
-          res.status(404).json({ message: 'No location found with this id!' });
-          return;
-        }
-        res.json(dblocationSportdata);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  });
+  // //Deletes locationSport 
+  // router.delete('/:id', (req, res) => {
+  //   locationSport.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   })
+  //     .then(dblocationSportdata => {
+  //       if (!dblocationSportdata) {
+  //         res.status(404).json({ message: 'No location found with this id!' });
+  //         return;
+  //       }
+  //       res.json(dblocationSportdata);
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //       res.status(500).json(err);
+  //     });
+  // });
 
 
 module.exports = router;

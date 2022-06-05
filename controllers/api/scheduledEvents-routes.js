@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { scheduledEvents, sports, location, user } = require('../../models');
 const withAuth = require('../../utils/auth');
+const sequelize = require('../../config/connection');
 
 // This route allows searchs for events
 
@@ -49,7 +50,12 @@ router.get('/:id', (req, res) => {
         {
           model: location,
           attributes: ['name']
-        }
+        },
+        {
+            model: location,
+            attributes: ['name'],
+            as: "coordinator"
+        },
       ] 
 })
 .then(dbPostData => {
