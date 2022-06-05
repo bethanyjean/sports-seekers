@@ -2,7 +2,7 @@
 const user = require('./user');
 const sports = require('./sports');
 const location = require('./location');
-const locationSport = require('./locationSport');
+// const locationSport = require('./locationSport');
 const scheduledEvents = require('./scheduledEvents');
 const scheduledParticipants = require('./scheduledParticipants');
 
@@ -19,11 +19,12 @@ scheduledEvents.belongsTo(user, {
 });
 
 location.hasMany(scheduledEvents, {
-    foreignKey: 'scheduledEvents_id'
+    foreignKey: 'location_id'
 });
 
 scheduledEvents.belongsTo(location, {
-    foreignKey: 'location_id'
+    foreignKey: 'location_id',
+    onDelete: 'SET NULL'
 });
 
 sports.hasMany(scheduledEvents, {
@@ -66,32 +67,32 @@ scheduledParticipants.hasMany(scheduledEvents, {
 });
 
 
-sports.hasMany(locationSport, {
-    foreignKey: 'sports_id'
-});
+// sports.hasMany(locationSport, {
+//     foreignKey: 'sports_id'
+// });
 
-locationSport.hasMany(sports, {
-    foreignKey: 'locationSport_id'
-});
+// locationSport.hasMany(sports, {
+//     foreignKey: 'locationSport_id'
+// });
 
-location.hasMany(locationSport, {
-    foreignKey: 'location_id'
-});
+// location.hasMany(locationSport, {
+//     foreignKey: 'location_id'
+// });
 
-locationSport.hasMany(location, {
-    foreignKey: 'locationSport_id'
-});
+// locationSport.hasMany(location, {
+//     foreignKey: 'locationSport_id'
+// });
 
-sports.belongsToMany(location, {
-    through: locationSport,
-    foreignKey: 'sports_id',
-    onDelete: 'SET NULL'
-});
+// sports.belongsToMany(location, {
+//     through: locationSport,
+//     foreignKey: 'sports_id',
+//     onDelete: 'SET NULL'
+// });
 
-location.belongsTo(sports, {
-    through: locationSport,
-    foreignKey: 'location_id',
-    onDelete: 'SET NULL'
-})
+// location.belongsTo(sports, {
+//     through: locationSport,
+//     foreignKey: 'location_id',
+//     onDelete: 'SET NULL'
+// })
 
-module.exports = { user, sports, location, locationSport, scheduledEvents, scheduledParticipants };
+module.exports = { user, sports, location, scheduledEvents, scheduledParticipants };
