@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
         attributes: [
             'id',
             'date',
-            'time',
+            // 'time',
           ],
           include: [
             {
@@ -21,6 +21,11 @@ router.get('/', (req, res) => {
             {
               model: location,
               attributes: ['name']
+            },
+            {
+                model: user,
+                attributes: ['username'],
+                as: "coordinator"
             }
           ] 
     })
@@ -40,7 +45,7 @@ router.get('/:id', (req, res) => {
       attributes: [
         'id',
         'date',
-        'time',
+        // 'time',
       ],
       include: [
         {
@@ -52,8 +57,8 @@ router.get('/:id', (req, res) => {
           attributes: ['name']
         },
         {
-            model: location,
-            attributes: ['name'],
+            model: user,
+            attributes: ['username'],
             as: "coordinator"
         },
       ] 
@@ -76,7 +81,9 @@ router.post('/', (req, res) => {
     scheduledEvents.create({
       uder_id: req.body.name,
       location_id: req.body.location_id,
-      sports_id: req.body.sports_id
+      sports_id: req.body.sports_id,
+      date: req.body.date,
+    //   time: req.body.time
     })
       .then(dbscheduledEventsdata => res.json(dbscheduledEventsdata))
       .catch(err => {
