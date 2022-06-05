@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     scheduledEvents.findAll({
         attributes: [
             'id',
-            'date',
+          //  'date',
             // 'time',
           ],
           include: [
@@ -83,10 +83,10 @@ router.get('/:id', (req, res) => {
 //Creates events
 router.post('/', (req, res) => {
     scheduledEvents.create({
-    //   uder_id: req.body.name,
+
       location_id: req.body.location_id,
       sports_id: req.body.sports_id,
-      date: req.body.date,
+     // date: req.body.date,
     //   time: req.body.time
     })
       .then(dbscheduledEventsdata => res.json(dbscheduledEventsdata))
@@ -98,7 +98,7 @@ router.post('/', (req, res) => {
 
   //Deletes event 
   router.delete('/:id', withAuth, (req, res) => {
-    dbscheduledEventsdata.destroy({
+    scheduledEvents.destroy({
       where: {
         id: req.params.id
       }
