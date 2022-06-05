@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { scheduledEvents, sports, location, user } = require('../../models');
 const withAuth = require('../../utils/auth');
+const sequelize = require('../../config/connection');
 
 // This route allows searchs for events
 
@@ -29,6 +30,47 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+//Retrieves one event
+router.get('/:id', (req, res) => {
+    Post.findOne({
+      where: {
+        id: req.params.id
+      },
+      attributes: [
+        'id',
+        'date',
+        'time',
+      ],
+      include: [
+        {
+          model: sports,
+          attributes: ['name']
+        },
+        {
+          model: location,
+          attributes: ['name']
+        },
+        {
+            model: location,
+            attributes: ['name'],
+            as: "coordinator"
+        },
+      ] 
+})
+.then(dbPostData => {
+      if (!dbPostData) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+      }
+      res.json(dbPostData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 //Creates events
 router.post('/', (req, res) => {
     scheduledEvents.create({
@@ -42,6 +84,7 @@ router.post('/', (req, res) => {
         res.status(400).json(err);
       });
   });
+
   //Deletes event 
   router.delete('/:id', withAuth, (req, res) => {
     dbscheduledEventsdata.destroy({
