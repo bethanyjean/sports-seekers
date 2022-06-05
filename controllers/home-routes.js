@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const sequelize = require('../config/connection');
 // const { Gallery, Painting } = require('../models');
 
 // GET all galleries for homepage
@@ -26,6 +27,13 @@ router.get('/', async (req, res) => {
   res.status(500).json(err);
 }
 });
+
+router.get('/login', (req, res) => {
+  if (req.session. loggedIn) {
+  res.render('login');
+  }
+});
+
 
 
 module.exports = router;

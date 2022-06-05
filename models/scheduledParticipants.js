@@ -19,15 +19,15 @@ scheduledParticipants.init(
                 model: 'user',
                 key: 'id'
             },
-            scheduledEvents_id: {
-                type: DataTypes.INTEGER,
-                references: {
-                    model: 'scheduledEvents',
-                    key: 'id'
-                }
+        },
+        scheduledEvents_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'scheduledEvents',
+                key: 'id'
             },
-
         }
+
     },
     {
         sequelize,
