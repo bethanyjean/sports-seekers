@@ -9,14 +9,14 @@ const scheduledParticipants = require('./scheduledParticipants');
 
 
 // create associations 
-user.hasMany(scheduledEvents, {
-    foreignKey: 'user_id'
-});
+// user.hasMany(scheduledEvents, {
+//     foreignKey: 'user_id'
+// });
 
-scheduledEvents.belongsTo(user, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
-});
+// scheduledEvents.belongsTo(user, {
+//     foreignKey: 'user_id',
+//     onDelete: 'SET NULL'
+// });
 
 location.hasMany(scheduledEvents, {
     foreignKey: 'location_id'
@@ -37,12 +37,14 @@ scheduledEvents.belongsTo(sports, {
 
 user.belongsToMany(scheduledEvents, {
     through: scheduledParticipants,
+    as:'event_participant',
     foreignKey: 'user_id',
     onDelete: 'SET NULL'
 });
 
 scheduledEvents.belongsToMany(user, {
     through: scheduledParticipants,
+    as:'event_participant',
     foreignKey: 'scheduledEvents_id',
     onDelete: 'SET NULL'
 });
