@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { scheduledEvents, sports, location, user } = require('../../models');
+const { scheduledEvents, sports, location, user, scheduledParticipants } = require('../../models');
 const withAuth = require('../../utils/auth');
 const sequelize = require('../../config/connection');
 
@@ -21,12 +21,16 @@ router.get('/', (req, res) => {
             {
               model: location,
               attributes: ['name']
-            },
+            }, 
             {
-                model: user,
-                attributes: ['username'],
-                as: "coordinator"
+              model: scheduledParticipants,
+              attributes: ['user_id']
             }
+        //     {
+        //         model: user,
+        //         attributes: ['username'],
+        //         as: "coordinator"
+        //     }
           ] 
     })
     .then(dbscheduledEventsdata => res.json(dbscheduledEventsdata))
@@ -55,20 +59,20 @@ router.get('/:id', (req, res) => {
         {
           model: location,
           attributes: ['name']
-        },
-        {
-            model: user,
-            attributes: ['username'],
-            as: "coordinator"
-        },
+        }
+        // {
+        //     model: user,
+        //     attributes: ['username'],
+        //     as: "coordinator"
+        // },
       ] 
 })
-.then(dbPostData => {
-      if (!dbPostData) {
+.then(dbscheduledEventsdata => {
+      if (!dbscheduledEventsdata) {
         res.status(404).json({ message: 'No post found with this id' });
         return;
       }
-      res.json(dbPostData);
+      res.json(dbscheduledEventsdata);
     })
     .catch(err => {
       console.log(err);
@@ -79,7 +83,7 @@ router.get('/:id', (req, res) => {
 //Creates events
 router.post('/', (req, res) => {
     scheduledEvents.create({
-      uder_id: req.body.name,
+    //   uder_id: req.body.name,
       location_id: req.body.location_id,
       sports_id: req.body.sports_id,
       date: req.body.date,
