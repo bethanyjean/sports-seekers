@@ -34,11 +34,11 @@ scheduledEvents.init(
                 key: 'id'
             },
         },
-        // date: {
-        //    type: DataTypes.DATE,
-        //     allowNull: false
+        date: {
+           type: DataTypes.DATE,
+            allowNull: false
             
-        // },
+        },
         // time: {
         //     type:DataTypes.TIME,
         //     allowNull: false
