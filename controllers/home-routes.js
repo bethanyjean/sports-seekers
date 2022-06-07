@@ -1,26 +1,101 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
-// const { Gallery, Painting } = require('../models');
+// const sequelize = require('../config/connection');
+const { scheduledEvents, sports } = require('../models');
 
-// GET all galleries for homepage
+
 router.get('/', async (req, res) => {
   try {
-    // const dbGalleryData = await Gallery.findAll({
-    //   include: [
-    //     {
-    //       model: Painting,
-    //       attributes: ['filename', 'description'],
-    //     },
-    //   ],
-    // });
-
-//     const galleries = dbGalleryData.map((gallery) =>
-//     gallery.get({ plain: true })
-//   );
-  // Send over the 'loggedIn' session variable to the 'homepage' template
   res.render('homepage', {
-    // galleries,
-    // loggedIn: req.session.loggedIn,
+    loggedIn: req.session.loggedIn,
+  });
+} catch (err) {
+  console.log(err);
+  res.status(500).json(err);
+}
+});
+
+router.get('/basketball', async (req, res) => {
+  try {
+    const events = await scheduledEvents.findAll({
+      include: [
+        {
+          model: sports,
+          attributes: ['name'],
+        },
+      ],
+    });
+  
+    // TODO Filter based on sport type 
+  
+  res.render('basketball', {
+    sport_events: events
+  });
+} catch (err) {
+  console.log(err);
+  res.status(500).json(err);
+}
+});
+
+router.get('/football', async (req, res) => {
+  try {
+    const events = await scheduledEvents.findAll({
+      include: [
+        {
+          model: sports,
+          attributes: ['name'],
+        },
+      ],
+    });
+  
+    // TODO Filter based on sport type 
+  
+  res.render('football', {
+    sport_events: events
+  });
+} catch (err) {
+  console.log(err);
+  res.status(500).json(err);
+}
+});
+
+router.get('/soccer', async (req, res) => {
+  try {
+    const events = await scheduledEvents.findAll({
+      include: [
+        {
+          model: sports,
+          attributes: ['name'],
+        },
+      ],
+    });
+  
+    // TODO Filter based on sport type 
+  
+  res.render('soccer', {
+    sport_events: events
+  });
+} catch (err) {
+  console.log(err);
+  res.status(500).json(err);
+}
+});
+
+
+router.get('/softball', async (req, res) => {
+  try {
+    const events = await scheduledEvents.findAll({
+      include: [
+        {
+          model: sports,
+          attributes: ['name'],
+        },
+      ],
+    });
+  
+    // TODO Filter based on sport type 
+  
+  res.render('softball', {
+    sport_events: events
   });
 } catch (err) {
   console.log(err);
@@ -29,8 +104,8 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  if (req.session. loggedIn) {
-  res.render('login');
+  if (req.session.loggedIn) {
+    res.render('login');
   }
 });
 
