@@ -16,7 +16,7 @@
 <body>
     <header>
         <h1>
-            <a href="/">
+            <a href="/" class="headerTitle">
               Sport-Seekers
             </a>
         </h1>
@@ -56,10 +56,11 @@
 
     <!-- drag and drop begins -->
     <main class="row">
-      <div class="col s12"><h2>Sporting Events</h2></div>
+      <div class="sportingEventsText"><h2>Sporting Events</h2></div>
   
 
       <div class="create row">
+        
 
         <div class="col s12 m6 l3">
           <a href="/basketball"><img src="images/basketball.png" alt="" class="sport-balls"></a>
@@ -89,7 +90,28 @@
       </div>
     </div> --}}
 
+  
+  <form class="addEventForm" id="addEventForm">
+  <div>
+    <label class="eventText" for="sport name">sport:</label>
+    <input type="text" id="sportNameCreate" />
+  </div>
+  <div>
+    <label class="eventText" for="sport location">location:</label>
+    <input type="text" id="locationNameCreate" />
+  </div>
+  <div>
+    <label class="eventText" for="sport date">date:</label>
+    <input type="text" id="dateCreate" />
+  </div>
+  <div>
+    <button id="createEventButton" class="createEventButton hover">Create Sport Event</button>
+  </div>
+  </form>
+  
+
     <div id="calendar"></div>
+
 		
     <!-- **** Footer ****-->		
 	<footer class="page-footer white lighten-4">
@@ -113,20 +135,7 @@
 		</div>
 	</footer>
 
-  <form class="addEventForm" id="addEventForm">
-  <div>
-    <label for="sport name">sport:</label>
-    <input type="text" id="sportNameCreate" />
-  </div>
-  <div>
-    <label for="sport location">location:</label>
-    <input type="text" id="locationNameCreate" />
-  </div>
-  <div>
-    <label for="sport date">date:</label>
-    <input type="text" id="dateCreate" />
-  </div>
-  </form>
+  
   <div> 
 
     {{!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}

@@ -2,15 +2,18 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #039be5;
-    
+    color: #216583;
+}
+
+.headerTitle {
+    color: #216583;
 }
 
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;;
+    background-color: #216583;
 }
 
 /* Cover */
@@ -36,6 +39,44 @@ nav {
 
 .hide-text {
     opacity: 0.0;
+}
+
+/* editing homepage appearance/layout */
+
+.sportingEventsText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #216583;
+}
+
+.localEventsRow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.addEventForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7be16;
+}
+
+.eventText {
+    font-size: 20px;
+    color: #216583;
+}
+
+.createEventButton {
+    border-radius: 15px;
+    background-color: lightgray;
+    color: #216583;
+}
+
+.createEventButton:hover {
+    background-color: #216583;
+    color: #f7be16;
 }
 
 /* contact us styles start */
@@ -102,7 +143,7 @@ nav {
 }
 
 .create {
-    border: 2px solid red;
+    border: 2px solid #216583;
     color: black;
     display: flex;
     font-family: sans-serif;
