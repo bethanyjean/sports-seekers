@@ -20,14 +20,14 @@ router.get('/basketball', async (req, res) => {
       include: [
         {
           model: sports,
+          where: {name: "Basketball"},
           attributes: ['name'],
         },
       ],
     });
   
-    // TODO Filter based on sport type 
-  
   res.render('basketball', {
+    loggedIn: req.session.loggedIn,
     sport_events: events
   });
 } catch (err) {
@@ -42,14 +42,14 @@ router.get('/football', async (req, res) => {
       include: [
         {
           model: sports,
+          where: {name: "Football"},
           attributes: ['name'],
         },
       ],
     });
   
-    // TODO Filter based on sport type 
-  
   res.render('football', {
+    loggedIn: req.session.loggedIn,
     sport_events: events
   });
 } catch (err) {
@@ -64,14 +64,14 @@ router.get('/soccer', async (req, res) => {
       include: [
         {
           model: sports,
+          where: {name: "Soccer"},
           attributes: ['name'],
         },
       ],
     });
   
-    // TODO Filter based on sport type 
-  
   res.render('soccer', {
+    loggedIn: req.session.loggedIn,
     sport_events: events
   });
 } catch (err) {
@@ -87,14 +87,14 @@ router.get('/softball', async (req, res) => {
       include: [
         {
           model: sports,
+          where: {name: "Softball"},
           attributes: ['name'],
         },
       ],
     });
-  
-    // TODO Filter based on sport type 
-  
+    
   res.render('softball', {
+    loggedIn: req.session.loggedIn,
     sport_events: events
   });
 } catch (err) {
@@ -104,9 +104,9 @@ router.get('/softball', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
+  // if (req.session.loggedIn) {
     res.render('login');
-  }
+  // }
 });
 
 
