@@ -41,8 +41,47 @@ router.get('/', (req, res) => {
 });
 
 //Retrieves all events based on sportsid
-//Retrieves one event
-router.get('/:sports_id', (req, res) => {
+router.get('/location/:location_id', (req, res) => {
+  scheduledEvents.findAll({
+    where: {
+      location_id: req.params.location_id
+    },
+    attributes: [
+      'id',
+      'date',
+      // 'time',
+    ],
+    include: [
+      {
+        model: sports,
+        attributes: ['name']
+      },
+      {
+        model: location,
+        attributes: ['name']
+      }
+      // {
+      //     model: user,
+      //     attributes: ['username'],
+      //     as: "coordinator"
+      // },
+    ] 
+})
+.then(dbscheduledEventsdata => {
+    if (!dbscheduledEventsdata) {
+      res.status(404).json({ message: 'No post found with this id' });
+      return;
+    }
+    res.json(dbscheduledEventsdata);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+//Retrieves one event by sports id
+router.get('/sports/:sports_id', (req, res) => {
   scheduledEvents.findAll({
     where: {
       sports_id: req.params.sports_id
@@ -80,7 +119,6 @@ router.get('/:sports_id', (req, res) => {
     res.status(500).json(err);
   });
 });
-
 
 //Retrieves one event
 router.get('/:id', (req, res) => {
