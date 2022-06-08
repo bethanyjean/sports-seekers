@@ -13,13 +13,13 @@ scheduledEvents.init(
             primaryKey: true,
             autoIncrement: true
         },
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'user',
-                key: 'id'
-            }
-        },
+        // user_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'user',
+        //         key: 'id'
+        //     }
+        // },
         location_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -34,11 +34,11 @@ scheduledEvents.init(
                 key: 'id'
             },
         },
-        // date: {
-        //    type: DataTypes.DATE,
-        //     allowNull: false
+        date: {
+           type: DataTypes.DATE,
+            allowNull: false
             
-        // },
+        },
         // time: {
         //     type:DataTypes.TIME,
         //     allowNull: false
