@@ -1,21 +1,28 @@
+//const { json } = require("express/lib/response");
+
 async function addEventFormHandler(event) {
     event.preventDefault();
 
     
-    }
-    const sportcreate = document.getElementById("sportscreate");
-    const sport = document.querySelector('#sportNameCreate').value.trim();
-    const location = document.querySelector('#locationNameCreate').value.trim();
-    const date = document.querySelector('#dateCreate').value.trim();
-    console.log(sport,location, date)
 
+    const sportcreate = document.getElementById("sportscreate");
+    var sport = document.querySelector('#sportscreate').value.trim();
+    sport = parseInt(sport);
+    var location = document.querySelector('#locationcreate').value.trim();
+    location = parseInt(location);
+    const date1 = document.querySelector('#dateCreate').value.trim();
+    console.log(sport,location, date1)
+
+ 
+
+    //const newDate = JSON.stringify({date}) 
         const response = await fetch('/api/scheduledEvents', {
             
             method: 'post',
-            body: JSON.stringify({
+            body:JSON.stringify({
                 sport,
-                location,
-                date
+                location, 
+                date1
             }),
             headers: { 'Content-Type': 'application/json' }
         });
@@ -27,16 +34,6 @@ async function addEventFormHandler(event) {
         }
    
 
-
+    }
 
 document.querySelector('.addEventForm').addEventListener('submit', addEventFormHandler);
-element.addEventListener("change", (e) => {
-    const value = e.target.value;
-    const text = element.options[element.selectedIndex].text;
-   
-    if (value) {
-      document.getElementById("picksport").textContent = `Value Selected: ${value}`;
-    } else {
-      document.getElementById("picksport").textContent = "";
-    }
-  });
