@@ -94,10 +94,15 @@
 
 
 </div>
-<form class="addEventForm" id="addEventForm" class="addEventForm">
 
-  <div class="sports">
-    <select name="sportscreate" id="sportNameCreate">
+<form class="addEventForm" id="addEventForm" class="addEventForm">  
+  <div>
+    <label class="eventText" for="sport date">Select date, sport, and location below:</label>
+    <input type="date" id="dateCreate" />
+  </div>
+  
+<div class="sports1">
+  <select name="sportscreate" id="sportscreate">
   <option value="">--select sport--</option>
   <option value=1>Basketball</option>
   <option value=2>Football</option>
@@ -108,8 +113,8 @@
   </div>
 
 
-   
-    <select name="locationcreate" id="locationNameCreate">
+  <div class="sportslocation">
+  <select name="locationcreate" id="locationcreate">
   <option value="">--select location--</option>
   <option value=1>Griffin Court</option>
   <option value=2>Ham Court</option>
@@ -117,23 +122,12 @@
   <option value=4>Tyler's Complex</option>
 </select>
 <h2 id="picklocation"></h2>   
- 
-  <div>
-    <label class="eventText" for="sport date">date:</label>
-    <input type="date" id="dateCreate" />
-  </div>
+ </div>
   <div>
     <button id="createEventButton" class="createEventButton hover">Create Sport Event</button>
   </div>
-</form>
+  </form>
   
-  <div class="hide-text">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Facere aut mollitia placeat impedit omnis quia quod sequi. 
-      Nobis dolorum ut commodi rem laborum ullam a, ea, nesciunt voluptas, qui debitis.
-    </p>
-  </div>
 
     <div id="calendar"></div>
     
