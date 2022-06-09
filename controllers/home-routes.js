@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 
 router.get('/basketball', async (req, res) => {
   try {
-    const events = await scheduledEvents.findAll({
+    const events1 = await scheduledEvents.findAll({
       include: [
         {
           model: sports,
@@ -25,10 +25,16 @@ router.get('/basketball', async (req, res) => {
         },
       ],
     });
-  
+  // console.log("fomr /basketball FE api: " + events1)
+  // .get({plain: true})
+  // map
+  const basketballEvent = events1.map(basketballEvent => basketballEvent.get({plain: true}) )
+  console.log("=====================")
+  console.log(basketballEvent);
+
   res.render('basketball', {
     loggedIn: req.session.loggedIn,
-    sport_events: events
+    sport_events: basketballEvent
   });
 } catch (err) {
   console.log(err);
@@ -38,7 +44,7 @@ router.get('/basketball', async (req, res) => {
 
 router.get('/football', async (req, res) => {
   try {
-    const events = await scheduledEvents.findAll({
+    const events1 = await scheduledEvents.findAll({
       include: [
         {
           model: sports,
@@ -47,10 +53,11 @@ router.get('/football', async (req, res) => {
         },
       ],
     });
+    console.log("fomr /football FE api: " + events1)
   
   res.render('football', {
     loggedIn: req.session.loggedIn,
-    sport_events: events
+    sport_events: events1
   });
 } catch (err) {
   console.log(err);
@@ -60,7 +67,7 @@ router.get('/football', async (req, res) => {
 
 router.get('/soccer', async (req, res) => {
   try {
-    const events = await scheduledEvents.findAll({
+    const events1 = await scheduledEvents.findAll({
       include: [
         {
           model: sports,
@@ -72,7 +79,7 @@ router.get('/soccer', async (req, res) => {
   
   res.render('soccer', {
     loggedIn: req.session.loggedIn,
-    sport_events: events
+    sport_events: events1
   });
 } catch (err) {
   console.log(err);
@@ -83,7 +90,7 @@ router.get('/soccer', async (req, res) => {
 
 router.get('/softball', async (req, res) => {
   try {
-    const events = await scheduledEvents.findAll({
+    const events1 = await scheduledEvents.findAll({
       include: [
         {
           model: sports,
@@ -95,7 +102,7 @@ router.get('/softball', async (req, res) => {
     
   res.render('softball', {
     loggedIn: req.session.loggedIn,
-    sport_events: events
+    sport_events: events1
   });
 } catch (err) {
   console.log(err);
