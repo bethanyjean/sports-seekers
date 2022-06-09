@@ -2,11 +2,12 @@
     <div class="top">
         <img src="images/Basketball1.jpeg" alt="Dude playing basketball."/>
     </div>
-    {{#if loggedIn}}
+    {{!-- {{#if loggedIn}}
         <button class="event-signup">Sign Up</button>
-     {{/if}}
-    <div class="bottom">
-        <p>{{dataValues.sport.dataValues.name}}</p>
+     {{/if}} --}}
+    <div class="bottom" id="list-of-events">
+        <p>{{location.name}}</p>
+        <p>{{date}}</p>
     </div>
 </div>
 
