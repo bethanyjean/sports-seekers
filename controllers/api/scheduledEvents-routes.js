@@ -162,7 +162,8 @@ router.get('/:id', (req, res) => {
 
 //Creates events
 router.post('/', (req, res) => {
-    scheduledEvents.create({
+  console.log(req.body.sports_id)  
+  scheduledEvents.create({
 
       location_id: req.body.location_id,
       sports_id: req.body.sports_id,
