@@ -74,6 +74,7 @@ nav {
     color: #216583;
     padding: 8px;
     font-size: 20px;
+    margin: 20px;
 }
 
 .createEventButton:hover {
@@ -84,6 +85,34 @@ nav {
 .hide-text {
     opacity: 0.0;
 }
+
+#addEventForm {
+    display: flex;
+}
+
+#sportscreate {
+    background-color: #216583;
+    color: #f7be16;
+    margin-top: 35px;
+    
+}
+
+#locationcreate {
+    background-color: #216583;
+    color: #f7be16;
+    margin-top: 35px;
+}
+
+.sportslocation {
+    padding-left: 20px;
+}
+
+.sports1 {
+    padding-left: 20px;
+}
+
+
+
 
 /* contact us styles start */
 
@@ -304,12 +333,19 @@ ul {
 }
 
 .sports {
-    display: none;
-    position: absolute;
+    display: inline !important;
+    position:absolute;
     background-color: #f1f1f1;
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+}
+.addEventForm {
+    display: inline;
+}
+
+select {
+    display: inline !important;
 }
 
 .sports li {

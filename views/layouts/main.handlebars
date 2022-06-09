@@ -91,45 +91,43 @@
 
 
 </div>
-<form class="addEventForm" id="addEventForm">
 
+<form class="addEventForm" id="addEventForm" class="addEventForm">  
   <div>
-    <label class="eventText" for="sport name">sport:</label>
-    <div class="dropdown_list">
-      <button class="dropdown_button">
-        Select Sport
-      </button>
+    <label class="eventText" for="sport date">Select date, sport, and location below:</label>
+    <input type="date" id="dateCreate" />
+  </div>
+  
+<div class="sports1">
+  <select name="sportscreate" id="sportscreate">
+  <option value="">--select sport--</option>
+  <option value=1>Basketball</option>
+  <option value=2>Football</option>
+  <option value=3>Soccer</option>
+  <option value=4>Softball</option>
+</select>
+<h2 id="picksport"></h2>   
+  </div>
 
-      <div id="sports_id" class="sports">
-        <li><a href="">Basketball</a></li>
-        <li><a href="">Football</a></li>
-        <li><a href="">Soccer</a></li>
-        <li><a href="">Softball</a></li>
-      </div>
-    </div>
-  </div>
-  <div>
-    <label class="eventText" for="sport location">location:</label>
-    <input type="text" id="locationNameCreate" />
-  </div>
-  <div>
-    <label class="eventText" for="sport date">date:</label>
-    <input type="text" id="dateCreate" />
-  </div>
+
+  <div class="sportslocation">
+  <select name="locationcreate" id="locationcreate">
+  <option value="">--select location--</option>
+  <option value=1>Griffin Court</option>
+  <option value=2>Ham Court</option>
+  <option value=3>Marina's Field</option>
+  <option value=4>Tyler's Complex</option>
+</select>
+<h2 id="picklocation"></h2>   
+ </div>
   <div>
     <button id="createEventButton" class="createEventButton hover">Create Sport Event</button>
   </div>
-</form>
+  </form>
   
-  <div class="hide-text">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Facere aut mollitia placeat impedit omnis quia quod sequi. 
-      Nobis dolorum ut commodi rem laborum ullam a, ea, nesciunt voluptas, qui debitis.
-    </p>
-  </div>
 
     <div id="calendar"></div>
+    
 
 		
     <!-- **** Footer ****-->		
