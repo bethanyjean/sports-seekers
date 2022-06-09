@@ -13,5 +13,4 @@ var swanson = function() {
 
 swanson();
 
-// $(".sportevents-list").draggable();
 
