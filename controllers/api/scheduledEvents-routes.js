@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     scheduledEvents.findAll({
         attributes: [
             'id',
-          //  'date',
+            'date',
             // 'time',
           ],
           include: [
@@ -166,7 +166,7 @@ router.post('/', (req, res) => {
 
       location_id: req.body.location_id,
       sports_id: req.body.sports_id,
-     // date: req.body.date,
+      date: req.body.date,
     //   time: req.body.time
     })
       .then(dbscheduledEventsdata => res.json(dbscheduledEventsdata))
