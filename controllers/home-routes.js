@@ -1,6 +1,6 @@
 const router = require('express').Router();
 // const sequelize = require('../config/connection');
-const { scheduledEvents, sports } = require('../models');
+const { scheduledEvents, sports, location } = require('../models');
 
 
 router.get('/', async (req, res) => {
@@ -17,18 +17,23 @@ router.get('/', async (req, res) => {
 router.get('/basketball', async (req, res) => {
   try {
     const events = await scheduledEvents.findAll({
+      where: {sports_id: 1},
+      attributes: [
+        'date'
+      ],
       include: [
         {
-          model: sports,
-          where: {name: "Basketball"},
+
+          model: location,
           attributes: ['name'],
+
         },
       ],
     });
-  
+  var eventsArray = events.map((event1) => event1.get({plain:true}))
   res.render('basketball', {
-    loggedIn: req.session.loggedIn,
-    sport_events: events
+    // loggedIn: req.session.loggedIn,
+    sport_events: eventsArray
   });
 } catch (err) {
   console.log(err);
