@@ -341,7 +341,7 @@ ul {
     z-index: 1;
 }
 .addEventForm {
-    display: inline-flex;
+    display: inline;
 }
 
 select {
