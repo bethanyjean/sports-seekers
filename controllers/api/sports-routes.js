@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
     });
 });
 
+
 // Creates specific sport 
 router.post('/', (req, res) => {
     sports.create({
@@ -28,46 +29,6 @@ router.post('/', (req, res) => {
             res.status(400).json(err);
         });
 });
-//Deletes sports 
-// router.delete('/.id',  (req, res) => {
-//   sports.destroy({
-//     sport: req.body.sports,
-//     minimumPeopleRequired: req.body.minimumPeopleRequired,
-//     descriptioin: req.body.description,
-//      equipmentNeeded: req.body.equipmentNeeded
-//   })
-//     .then(dbsportsdata => {
-//       if (!dbsportsdata) {
-//         res.status(404).json({ message: 'No sport found with this id!' });
-//         return;
-//       }
-//       res.json(dbsportsdata);
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
-// router.put('/update', (req, res) => {
-//   sports.update({
-//      where: {    
-//     sport: req.body.sports,
-//     minimumPeopleRequired: req.body.minimumPeopleRequired,
-//     descriptioin: req.body.description,
-//      equipmentNeeded: req.body.equipmentNeeded
-//     }
-//   })
-//     .then(dbsportsdata => {
-//       if (!dbsportsdata) {
-//         res.status(404).json({ message: "No sports update with this information" });
-//         return;
-//       }
-//       res.json(dbsportsdata);
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
+
 
 module.exports = router;

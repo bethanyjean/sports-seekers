@@ -1,0 +1,14 @@
+<div class="card card-1">
+    <div class="top">
+        <img src="images/Basketball1.jpeg" alt="Dude playing basketball."/>
+    </div>
+    {{#if loggedIn}}
+        <button class="event-signup">Sign Up</button>
+     {{/if}}
+    <div class="bottom">
+        <p>{{dataValues.sport.dataValues.name}}</p>
+    </div>
+</div>
+
+
+<script src="javascript/event_signup.js"></script>

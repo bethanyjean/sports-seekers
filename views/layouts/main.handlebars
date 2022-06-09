@@ -8,14 +8,15 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
+    <link rel="stylesheet" type="text/css" href="stylesheets/evo-calendar.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/evo-calendar.royal-navy.css">
     <link rel="stylesheet" href="stylesheets/style.css" /> 
 
 </head>
 <body>
-
     <header>
         <h1>
-            <a href="/">
+            <a href="/" class="headerTitle">
               Sport-Seekers
             </a>
         </h1>
@@ -28,7 +29,13 @@
                 <a href="/" style="font-size: 16px;">Home</a>
               </li>
               <li>
-                <a href="/views/login" style="font-size: 16px;">Login</a>
+                 {{#if loggedIn}}
+                  <a href="/logout" style="font-size: 16px;">Logout</a>
+                 {{else}}
+                  <!-- Otherwise, show a link to login -->
+                  <a href="/login">Login</a>
+                {{/if}}
+
               </li>
               <li>
                 <a href="#" style="font-size: 16px;">Calendar</a>
@@ -49,66 +56,31 @@
 
     <!-- drag and drop begins -->
     <main class="row">
-      <div class="col s12"><h2>Sporting Events</h2></div>
+      <div class="sportingEventsText"><h2>Sporting Events</h2></div>
   
 
       <div class="create row">
+        
 
         <div class="col s12 m6 l3">
-          <img src="images/basketball.png" alt="" class="sport-balls">
+          <a href="/basketball"><img src="images/basketball.png" alt="" class="sport-balls"></a>
         </div> 
     
         <div class="col s12 m6 l3">
-          <img src="images/football.png" alt="" class="sport-balls">
+          <a href="/football"><img src="images/football.png" alt="" class="sport-balls"></a>
         </div>
           
         <div class="col s12 m6 l3">
-          <img src="images/soccer.png" alt="" class="sport-balls">
+          <a href="/soccer"><img src="images/soccer.png" alt="" class="sport-balls"></a>
         </div>
 
         <div class="col s12 m6 l3">
-          <img src="images/Softball.png" alt="" class="sport-balls custom-ball">
+          <a href="/softball"><img src="images/Softball.png" alt="" class="sport-balls custom-ball"></a>
         </div>
       
       </div>
 
-      <div>
-        <div class="card card-1">
-          <div class="top">
-            <img src="images/Basketball1.jpeg" alt="Dude playing basketball."/>
-          </div>
-          <div class="bottom">
-            <p>Local Basketball Event</p>
-          </div>
-        </div>
-
-        <div class="card card-1">
-          <div class="top">
-            <img src="images/Soccer5.jpeg" alt="Soccer image"/>
-          </div>
-          <div class="bottom">
-            <p>Local Soccer Event</p>
-          </div>
-        </div>
-
-        <div class="card card-1">
-          <div class="top">
-            <img src="images/Softball1.jpeg" alt="softball"/>
-          </div>
-          <div class="bottom">
-            <p>Local Football Event</p>
-          </div>
-        </div>
-
-        <div class="card card-1">
-          <div class="top">
-            <img src="images/Softball1.jpeg" alt="softball"/>
-          </div>
-          <div class="bottom">
-            <p>Local Softball Event</p>
-          </div>
-        </div>
-      </div>
+      {{{body}}}
       
     </main>
     
@@ -118,7 +90,50 @@
       </div>
     </div> --}}
 
-    	<!-- **** Footer ****-->		
+  
+
+
+</div>
+
+<form class="addEventForm" id="addEventForm" class="addEventForm">  
+  <div>
+    <label class="eventText" for="sport date">Select date, sport, and location below:</label>
+    <input type="date" id="dateCreate" />
+  </div>
+  
+<div class="sports1">
+  <select name="sportscreate" id="sportscreate">
+  <option value="">--select sport--</option>
+  <option value=1>Basketball</option>
+  <option value=2>Football</option>
+  <option value=3>Soccer</option>
+  <option value=4>Softball</option>
+</select>
+<h2 id="picksport"></h2>   
+  </div>
+
+
+  <div class="sportslocation">
+  <select name="locationcreate" id="locationcreate">
+  <option value="">--select location--</option>
+  <option value=1>Griffin Court</option>
+  <option value=2>Ham Court</option>
+  <option value=3>Marina's Field</option>
+  <option value=4>Tyler's Complex</option>
+</select>
+<h2 id="picklocation"></h2>   
+ </div>
+  <div>
+    <button id="createEventButton" class="createEventButton hover">Create Sport Event</button>
+  </div>
+  </form>
+  
+
+    <div id="calendar"></div>
+    
+
+		
+    <!-- **** Footer ****-->		
 	<footer class="page-footer white lighten-4">
 		<div class="container ">
 			<div class="row">
@@ -140,12 +155,22 @@
 		</div>
 	</footer>
 
+  
+  <div> 
+
+    {{!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script>
+    {{!-- <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script> --}}
+
+    <script src="javascript/script.js"></script>
+<script src="javascript/event_creation.js"></script>
     
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
-    <script src="./assets/js/script.js"></script>
-    
+
+{{!-- <script>
+  $("#calendar").evoCalendar();
+</script> --}}
 
 </body>
 </html>
