@@ -91,10 +91,23 @@
     </div> --}}
 
   
-  <form class="addEventForm" id="addEventForm">
+
+</div>
+<form class="addEventForm" id="addEventForm">
   <div>
     <label class="eventText" for="sport name">sport:</label>
-    <input type="text" id="sportNameCreate" />
+    <div class="dropdown_list">
+      <button class="dropdown_button">
+        Select Sport
+      </button>
+
+      <div id="sports_id" class="sports">
+        <li><a href="">Basketball</a></li>
+        <li><a href="">Football</a></li>
+        <li><a href="">Soccer</a></li>
+        <li><a href="">Softball</a></li>
+      </div>
+    </div>
   </div>
   <div>
     <label class="eventText" for="sport location">location:</label>
@@ -107,7 +120,7 @@
   <div>
     <button id="createEventButton" class="createEventButton hover">Create Sport Event</button>
   </div>
-  </form>
+</form>
   
 
     <div id="calendar"></div>
