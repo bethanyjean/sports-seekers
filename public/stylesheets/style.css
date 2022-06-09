@@ -94,13 +94,24 @@ nav {
     background-color: #216583;
     color: #f7be16;
     margin-top: 35px;
-    
+    border-radius: 15px;
+}
+
+#sportscreate:hover {
+    background-color: lightgray;
+    color: #216583;
+}
+
+#locationcreate:hover {
+    background-color: lightgray;
+    color: #216583;
 }
 
 #locationcreate {
     background-color: #216583;
     color: #f7be16;
     margin-top: 35px;
+    border-radius: 15px;
 }
 
 .sportslocation {

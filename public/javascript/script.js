@@ -25,6 +25,7 @@ swanson();
         //   calendarScheduledEvents = data.map(function(event) {
         //     var scheduledEvent = {}
         //     scheduledEvent.type = event.sports.name
+
         //   })  
         //   })
         // });
