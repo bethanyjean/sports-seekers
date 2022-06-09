@@ -6,9 +6,9 @@ async function addEventFormHandler(event) {
     
 
     const sportcreate = document.getElementById("sportscreate");
-    var sport = document.querySelector('#sportNameCreate').value.trim();
+    var sport = document.querySelector('#sportscreate').value.trim();
     sport = parseInt(sport);
-    var location = document.querySelector('#locationNameCreate').value.trim();
+    var location = document.querySelector('#locationcreate').value.trim();
     location = parseInt(location);
     const date1 = document.querySelector('#dateCreate').value.trim();
     console.log(sport,location, date1)
@@ -21,7 +21,7 @@ async function addEventFormHandler(event) {
             method: 'post',
             body:JSON.stringify({
                 sport,
-            location, 
+                location, 
                 date1
             }),
             headers: { 'Content-Type': 'application/json' }
