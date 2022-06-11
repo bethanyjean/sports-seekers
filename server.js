@@ -13,7 +13,13 @@ const helpers = require('./utils/helpers')
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: {
+    path: '/',
+    httpOnly: true,
+    secure: false,
+    maxAge: 24 * 60 * 60 * 1000,
+    signed: false
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
