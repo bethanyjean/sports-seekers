@@ -11,7 +11,6 @@ router.get('/', (req, res) => {
         attributes: [
             'id',
             'date',
-            // 'time',
           ],
           include: [
             {
@@ -26,11 +25,6 @@ router.get('/', (req, res) => {
               model: scheduledParticipants,
               attributes: ['user_id']
             }
-        //     {
-        //         model: user,
-        //         attributes: ['username'],
-        //         as: "coordinator"
-        //     }
           ] 
     })
     .then(dbscheduledEventsdata => res.json(dbscheduledEventsdata))
