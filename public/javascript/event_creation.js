@@ -26,7 +26,7 @@ async function addEventFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/#');
+            window.alert("You've Successfully Created an Event for other Seekers to Find.")
         } else {
             alert(response.statusText);
         }
