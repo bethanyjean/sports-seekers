@@ -41,21 +41,26 @@
     </a>
 </div>
 
-{{!-- <div>
-    <h2>Thanks for signing in!</h2>
+<div>
+{{#if loggedIn}}
+    <h2 style="text center-align">Thanks for signing in!</h2>
+    <h3>See Bulletin Board below for updates.</h3>
     <div class="card card-1">
         <div class="top">
-            <img src="" alt="" />
+            <img src="images/soccer player.png" alt="SoccerPlayer" />
         </div>
         <div class="bottom">
             <p>Please select events above to sign up</p>
         </div>
     </div>
+
     <div class="card card-1">
         <div class="top">
-            <img src="" alt="" />
+            <img src="images/baseball player.png" alt="BaseballPlayer"/>
         </div>
         <div class="bottom">
-            <p>Coming soon to the website! Weather additions to check the forecast.</p>
+            <p>Coming soon! Weather Updates! Stay tuned!</p>
         </div>
-</div> --}}
+        {{else}}
+        {{/if}}
+    </div>
