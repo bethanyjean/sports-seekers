@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/basketball', async (req, res) => {
   try {
     const events = await scheduledEvents.findAll({
-      where: {sports_id: 1},
+      where: {sports_id: 5},
       attributes: [
         'date'
       ],
@@ -77,7 +77,7 @@ router.get('/football', async (req, res) => {
 router.get('/soccer', async (req, res) => {
   try {
     const events = await scheduledEvents.findAll({
-      where: {sports_id: 3},
+      where: {sports_id: 1},
       attributes: [
         'date'
       ],
@@ -108,7 +108,7 @@ router.get('/soccer', async (req, res) => {
 router.get('/softball', async (req, res) => {
   try {
     const events = await scheduledEvents.findAll({
-      where: {sports_id: 4},
+      where: {sports_id: 3},
       attributes: [
         'date'
       ],
