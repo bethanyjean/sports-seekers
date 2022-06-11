@@ -23,10 +23,12 @@ router.get('/basketball', async (req, res) => {
       ],
       include: [
         {
-
+          model: sports,
+          attributes: ['name']
+        },
+        {
           model: location,
           attributes: ['name'],
-
         },
       ],
     });
