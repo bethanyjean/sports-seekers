@@ -42,8 +42,8 @@
 </div>
 
 <div>
-{{#if loggedIn}}
-    <h2 style="text center-align">Thanks for signing in!</h2>
+    {{#if loggedIn}}
+    <h2>Thanks for signing in!</h2>
     <h3>See Bulletin Board below for updates.</h3>
     <div class="card card-1">
         <div class="top">
@@ -56,11 +56,21 @@
 
     <div class="card card-1">
         <div class="top">
-            <img src="images/baseball player.png" alt="BaseballPlayer"/>
+            <img src="images/baseball player.png" alt="BaseballPlayer" />
         </div>
         <div class="bottom">
             <p>Coming soon! Weather Updates! Stay tuned!</p>
         </div>
-        {{else}}
-        {{/if}}
     </div>
+
+    <div class="card card-1">
+        <div class="top">
+            <img src="images/Membership card .jpeg" alt="Membership" />
+        </div>
+        <div class="bottom">
+            <p>Membership options page coming soon.</p>
+        </div>
+    </div>
+    {{else}}
+    {{/if}}
+</div>
