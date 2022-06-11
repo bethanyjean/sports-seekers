@@ -12,26 +12,27 @@ var swanson = function() {
 };
 
 swanson();
-
+var calendarScheduledEvents = [];
 
         // initialize your calendar, once the page's DOM is ready
-        $(document).ready(function() {
-        //   var calendarScheduledEvents = [];
-        //   fetch('/api/scheduledEvents', {
-        //     method: 'get',
-        //     headers: { 'Content-Type': 'application/json' }
-        // }).then(function(response) {
-        //   response.json().then(function(data) {
-        //   calendarScheduledEvents = data.map(function(event) {
-        //     var scheduledEvent = {}
-        //     scheduledEvent.type = event.sports.name
-
-        //   })  
-        //   })
-        // });
-          $('#calendar').evoCalendar({
-                theme: "Royal Navy",
-                // calendarEvents: calendarScheduledEvents
-            })
-        })
+$(document).ready(function () {
+  // fetch('/api/scheduledEvents', {
+  //   method: 'get',
+  //   headers: { 'Content-Type': 'application/json' }
+  // }).then(function (response) {
+  //   response.json()
+  // }).then(function (data) {
+  //     calendarScheduledEvents = data.map((event1) => event1.get({ plain:true }))
+  // })
+  // var tempArray = calendarScheduledEvents.map(calendarScheduledEvents => ({
+  //   id: calendarScheduledEvents.id,
+  //   name: calendarScheduledEvents.location.name,
+  //   date: calendarScheduledEvents.date,
+  //   type: calendarScheduledEvents.sports.name
+  // }))       
+$('#calendar').evoCalendar({
+  theme: "Royal Navy",
+  // calendarEvents: tempArray
+})
+});
 
