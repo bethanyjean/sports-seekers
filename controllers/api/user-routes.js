@@ -78,6 +78,7 @@ router.post('/logout', (req, res) => {
   else {
     res.status(404).end();
   }
+  res.render('homepage')
 });
 
 router.put('/:id', (req, res) => {

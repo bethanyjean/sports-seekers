@@ -8,7 +8,7 @@ class scheduledEvents extends Model { }
 scheduledEvents.init(
     {
         id: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
@@ -21,14 +21,14 @@ scheduledEvents.init(
         //     }
         // },
         location_id: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'location',
                 key: 'id'
             }
         },
         sports_id: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'sports',
                 key: 'id'

@@ -2,41 +2,75 @@
     <a href="/basketball">
         <div class="card card-1">
             <div class="top">
-            <img src="images/Basketball1.jpeg" alt="Dude playing basketball."/>
+                <img src="images/Basketball1.jpeg" alt="Dude playing basketball." />
             </div>
             <div class="bottom">
-            <p>Local Basketball Events</p>
+                <p>Local Basketball Events</p>
             </div>
         </div>
     </a>
     <a href="/football">
         <div class="card card-1">
             <div class="top">
-            <img src="images/Football1.jpeg" alt="Football image"/>
+                <img src="images/Football1.jpeg" alt="Football image" />
             </div>
             <div class="bottom">
-            <p>Local Football Events</p>
+                <p>Local Football Events</p>
             </div>
         </div>
     </a>
     <a href="/soccer">
         <div class="card card-1">
             <div class="top">
-            <img src="images/Soccer5.jpeg" alt="soccer"/>
+                <img src="images/Soccer5.jpeg" alt="soccer" />
             </div>
             <div class="bottom">
-            <p>Local Soccer Events</p>
+                <p>Local Soccer Events</p>
             </div>
         </div>
     </a>
     <a href="/softball">
         <div class="card card-1">
             <div class="top">
-            <img src="images/Softball2.jpeg" alt="softball"/>
+                <img src="images/Softball2.jpeg" alt="softball" />
             </div>
             <div class="bottom">
-            <p>Local Softball Events</p>
+                <p>Local Softball Events</p>
             </div>
         </div>
     </a>
+</div>
+
+<div>
+    {{#if loggedIn}}
+    <h2>Thanks for signing in!</h2>
+    <h3>See Bulletin Board below for updates.</h3>
+    <div class="card card-1">
+        <div class="top">
+            <img src="images/soccer player.png" alt="SoccerPlayer" />
+        </div>
+        <div class="bottom">
+            <p>Please select events above to sign up</p>
+        </div>
+    </div>
+
+    <div class="card card-1">
+        <div class="top">
+            <img src="images/baseball player.png" alt="BaseballPlayer" />
+        </div>
+        <div class="bottom">
+            <p>Coming soon! Weather Updates! Stay tuned!</p>
+        </div>
+    </div>
+
+    <div class="card card-1">
+        <div class="top">
+            <img src="images/Membership card .jpeg" alt="Membership" />
+        </div>
+        <div class="bottom">
+            <p>Membership options page coming soon.</p>
+        </div>
+    </div>
+    {{else}}
+    {{/if}}
 </div>
