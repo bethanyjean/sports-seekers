@@ -31,7 +31,8 @@ router.get('/basketball', async (req, res) => {
       ],
     });
   var eventsArray = events.map((event1) => event1.get({plain:true}))
-  res.render('basketball', {
+  console.log(eventsArray);
+  res.render('sports', {
     // loggedIn: req.session.loggedIn,
     sport_events: eventsArray
   });
@@ -44,18 +45,26 @@ router.get('/basketball', async (req, res) => {
 router.get('/football', async (req, res) => {
   try {
     const events = await scheduledEvents.findAll({
+      where: {sports_id: 2},
+      attributes: [
+        'date'
+      ],
       include: [
         {
           model: sports,
-          where: {name: "Football"},
+          attributes: ['name']
+        },
+        {
+          model: location,
           attributes: ['name'],
         },
       ],
     });
-  
-  res.render('football', {
-    loggedIn: req.session.loggedIn,
-    sport_events: events
+  var eventsArray = events.map((event1) => event1.get({plain:true}))
+  console.log(eventsArray);
+  res.render('sports', {
+    // loggedIn: req.session.loggedIn,
+    sport_events: eventsArray
   });
 } catch (err) {
   console.log(err);
@@ -66,18 +75,26 @@ router.get('/football', async (req, res) => {
 router.get('/soccer', async (req, res) => {
   try {
     const events = await scheduledEvents.findAll({
+      where: {sports_id: 3},
+      attributes: [
+        'date'
+      ],
       include: [
         {
           model: sports,
-          where: {name: "Soccer"},
+          attributes: ['name']
+        },
+        {
+          model: location,
           attributes: ['name'],
         },
       ],
     });
-  
-  res.render('soccer', {
-    loggedIn: req.session.loggedIn,
-    sport_events: events
+  var eventsArray = events.map((event1) => event1.get({plain:true}))
+  console.log(eventsArray);
+  res.render('sports', {
+    // loggedIn: req.session.loggedIn,
+    sport_events: eventsArray
   });
 } catch (err) {
   console.log(err);
@@ -89,18 +106,26 @@ router.get('/soccer', async (req, res) => {
 router.get('/softball', async (req, res) => {
   try {
     const events = await scheduledEvents.findAll({
+      where: {sports_id: 4},
+      attributes: [
+        'date'
+      ],
       include: [
         {
           model: sports,
-          where: {name: "Softball"},
-          attributes: ['name'],
+          attributes: ['name']
+        },
+        {
+          model: location,
+          attributes: ['name'] 
         },
       ],
     });
-    
-  res.render('softball', {
-    loggedIn: req.session.loggedIn,
-    sport_events: events
+  var eventsArray = events.map((event1) => event1.get({plain:true}))
+  console.log(eventsArray);
+  res.render('sports', {
+    // loggedIn: req.session.loggedIn,
+    sport_events: eventsArray
   });
 } catch (err) {
   console.log(err);
