@@ -10,16 +10,6 @@ console.log("inside the signupEvent Fromathanlder");
     const email = "abcd@gmail.com"
     const password = "1234abcd"
 
-<<<<<<< HEAD
-    if (username && email && password) {
-        const response = await fetch('/api/user/'+email, {
-            method: 'get',
-            // params: JSON.stringify({
-            //     username,
-            //     email,
-            //     password
-            // }),
-=======
         const response = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
@@ -27,7 +17,6 @@ console.log("inside the signupEvent Fromathanlder");
                 email,
                 password
             }),
->>>>>>> ce7fddf36d6108d2407c75cf5a34eac8a1272278
             headers: { 'Content-Type': 'application/json' }
         });
 
@@ -38,12 +27,8 @@ console.log("inside the signupEvent Fromathanlder");
             alert(response.statusText);
         }
     }
-<<<<<<< HEAD
-}
-console.log("inside the eveent sign up form");
-=======
 
->>>>>>> ce7fddf36d6108d2407c75cf5a34eac8a1272278
+console.log("inside the eveent sign up form");
 
 
 // $(".event-signup").on("click", "btn", function() {
