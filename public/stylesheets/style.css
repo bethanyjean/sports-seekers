@@ -20,6 +20,7 @@ nav {
 .quote {
     font-size: 34px;
     font-style: italic;
+    color: black;
 }
 .hero {
     display: flex;
@@ -31,15 +32,10 @@ nav {
     align-items: flex-start;
     background-attachment: fixed;
     background-position: 80%;
-    color: red;
     height: 400px;
     font-size: xx-large;
     }
 
-
-.hide-text {
-    opacity: 0.0;
-}
 
 /* editing homepage appearance/layout */
 
@@ -122,71 +118,10 @@ nav {
     padding-left: 20px;
 }
 
-
-
-
-/* contact us styles start */
-
-.contact h2 {
-    color: #039be5;
-    display: flex;
-    justify-content: center;
+.card .top img {
+    width: 290px;
 }
 
-.contact-info {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.contact-info > * {
-    flex: 1;
-    margin: 15px;
-}
-
-.contact-info h3 {
-    color: #039be5;
-    font-size: 30px;
-}
-
-.contact-info p, .contact-info address {
-    margin: 20px 0;
-    line-height: 1.5;
-    font-size: 16px;
-    font-style: normal;
-}
-
-.contact-form input, .contact-form textarea {
-    border: 1px solid black;
-    display: block;
-    padding: 7px 15px;
-    font-size: 16px;
-    color: #039be5;
-    width: 100%;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.75);
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    background-color: rgba(255, 255, 255, 1);
-    outline: none;
-}
-
-.contact-form button {
-    width: 100%;
-    border: none;
-    background: red;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 16px;
-    border-radius: 10px;
-}
-
-.contact-form button:hover {
-    color: #039be5;
-}
 
 .create {
     border: 2px solid #216583;
@@ -203,20 +138,7 @@ nav {
     padding: 10px;
   }
   
-.list-item {
-    background-color: #4AAE9B;
-    font-weight: normal;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 10px;
-  }
   
-.dropzone {
-    background-color: #6DB65B;
-    flex-basis: 100%;
-    flex-grow: 1;
-    padding: 10px;
-}
 
 ul {
     list-style-type: none;
@@ -228,43 +150,7 @@ ul {
     color:#ffffff;
 }
 
-.dropover {
-    background: rgba(0,0,0,0.3);
-}
 
-.dropover-active {
-    background: #0f7aa5e6;
-}
-
-.swanson {
-    text-transform: uppercase;
-    text-decoration: wavy;
-    font-weight: 900;
-    font-size: xx-large;
-    color:#039be5;
-}
-
-
-.col_pic {
-    width: 100%;
-    padding-left: 30px;
-}
-
-.col_details {
-  color:red;
-  font-style: italic;
-  font-size: medium;
-
-}
-
-.col_ingredients { 
-  color:red; 
-  font-style: italic;
-}
-
-.picture-container {
-    width:100%;
-}
 /* Style for the Login In Page */
 
 .login-box {
@@ -275,20 +161,18 @@ background-color: #216583;
 }
 
 button {
-    background-color: #225ca3;
-    color: white;
+    background-color: lightgray;
+    color: #216583;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
   }
 
 button:hover {
-    background-color: #0979ad;
+    background-color: #216583;
+    color: #f7be16;
 }
 
-/* Media Queries Info */
-@media screen and (min-width: 1300px){
-}
 
 /* .row {
   color: red;
@@ -401,4 +285,52 @@ select {
 .sports li:hover {
     background-color: #0979ad;
     color: white;
+}
+
+/* Media Queries Info */
+
+@media screen and (max-width: 768px) {
+    .headerTitle {
+        color: #216583;
+        font-size: 50px; 
+    }
+
+    .hero {
+    display: flex;
+    justify-content: wrap;
+    flex-wrap: wrap; 
+    background-image: url(../images/Basketball-Cover.jpeg);
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    align-items: flex-start;
+    background-attachment: fixed; 
+    background-position: 80%; 
+    background-color: #216583;
+    color: black;
+    font-size: 28px;
+    }
+
+    .quote {
+        font-size: 22px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #216583;
+    }
+
+    .homeText, .loginText {
+        font-size: 16px;
+        color: #f7be16;
+    }
+
+    .sportImage {
+        height: 150px;
+        width: 125px;
+    }
+
+
 }

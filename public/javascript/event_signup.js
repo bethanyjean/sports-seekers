@@ -1,30 +1,23 @@
-async function signupEventFormHandler(event) {
+async function signupEvent(event) {
     event.preventDefault();
-
-    const username = document.querySelector('#').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
-
-        const response = await fetch('/api/users', {
-            method: 'post',
-            body: JSON.stringify({
-                username,
-                email,
-                password
-            }),
-            headers: { 'Content-Type': 'application/json' }
-        });
-
-        if (response.ok) {
-            document.location.replace('/dashboard');
-        } else {
-            alert(response.statusText);
-        }
+const response = await fetch('/api/scheduledParticipants', {
+    method: 'post',
+    body:JSON.stringify({
+        user_id: session.user.user_id,
+        event_id: sport_events.id
+    }),
+    headers: {"Content-Type": 'application/json'}
+});
+    if (response.ok) {
+        window.alert("You've Successfully Signed Up for an Event. Seek you There!")
+        location.reload()
+    } else {
+        alert(response.statusText);
     }
 
+  }
 
 
-// $(".event-signup").on("click", "btn", function() {
-//     // get current text of p element
-    
-//   });
+document.querySelectorAll('.event-signup').forEach(item=> {
+    item.addEventListener('click', signupEvent)
+})
