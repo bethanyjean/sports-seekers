@@ -34,6 +34,34 @@ Have a clean repository that meets quality coding standards (file structure, nam
 Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 Stack Purposal: Creating an application that has the ability to search Sporting event within the Richmond area and having access to signup as participants.
+__________________________________________________________________
+Purpose:
+This group project focused on creating and executing a full stack web application to help users to find sporting events they can participate in, using a more efficient and streamlined process. The application allows users to search for local sporting events such as basketball, football, softball, and soccer at various locations. 
+__________________________________________________________________
+The web page includes:
+“Home”, “Login/Logout”, “Fun” buttons
+“Sporting Events” button which allows the user to select a sport
+“Calendar” which allows the user to create an event for the selected sport based on location and date/time
+__________________________________________________________________
+Built with:
+• HTML • CSS • JavaScript • JQuery • Materialize • Evo Calendar Package • Insomnia • MYSQL • Sequelize • Handlebars • Express • Connect-session-sequelize • Bcrypt • Dotenv • MYSQL12 • Express-session • Heroku 
+__________________________________________________________________
 
 Beta screenshot of our Wireframe: 
-![screenshot](/images/Wireframe%20Beta%20.png)
+![screenshot](/public/images/Wireframe%20Beta%20.png)
+
+Website Outlook
+![screenshot](/public/images/Front%20Page%20New%20.png)
+![screenshot](/public/images/Bottom%20Page.png)
+![screenshot](/public/images/Login%20Page.png)
+
+__________________________________________________________________
+
+Deployed Link:
+https://git.heroku.com/serene-beyond-42809.git 
+
+
+GitHub Repo Link: 
+
+https://github.com/bethanyjean/sports-seekers.git  
+
