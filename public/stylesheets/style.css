@@ -320,6 +320,17 @@ select {
     color: #216583;
 }
 
+.sportingEventInfo {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f7be16;
+}
+
+.infoText {
+    font-size: 25px;
+    color: #216583;
+}
+
 /* Media Queries Info */
 
 @media screen and (max-width: 768px) {
@@ -393,8 +404,6 @@ select {
     .bulletinBoardImages {
         display: flex;
         flex-wrap: wrap;
-    }
-
-    
+    } 
 
 }
