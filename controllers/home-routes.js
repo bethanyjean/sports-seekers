@@ -156,14 +156,12 @@ router.get('/softball', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.render('login');
-  }
+  res.render('login');
 });
+
 router.get('/logout',(req, res) =>{
   res.render('homepage');
 });
-
 
 module.exports = router;
 

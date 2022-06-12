@@ -17,7 +17,7 @@ async function loginFormHandler(event) {
 
         if (response.ok) {
             console.log("Login OK")
-            document.location.replace('hompeage');
+            document.location.replace('/');
         } else {
             console.log("Login Failed")
             alert(response.statusText);
