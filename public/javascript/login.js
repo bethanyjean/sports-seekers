@@ -1,3 +1,4 @@
+// Functions that gives ability to login using Email and Password //
 async function loginFormHandler(event) {
     event.preventDefault();
 

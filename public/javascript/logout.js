@@ -1,3 +1,4 @@
+// Connection to Logout Page and API Route for Logout //
 async function logout() {
     const response = await fetch('/api/users/logout', {
       method: 'post',

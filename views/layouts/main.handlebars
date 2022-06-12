@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  {{!-- Header that shows tabs for Home & Login Button --}}
   <header>
     <h1>
       <a href="/" class="headerTitle">
@@ -41,7 +42,7 @@
       </ul>
     </nav>
   </header>
-
+{{!-- Quote for the Page --}}
   <section class="hero">
     <h3 class="quote">"Champions keep playing until they get it right."</h3>
   </section>
@@ -55,7 +56,7 @@
 
     <div class="create row">
 
-
+{{!-- Cards that displays different sports --}}
       <div class="col s12 m6 l3">
         <a href="/basketball"><img src="images/basketball.png" alt="" class="sport-balls"></a>
       </div>
@@ -73,7 +74,7 @@
       </div>
 
     </div>
-
+{{!-- Expressions that allows handlebar to be sent to the body --}}
     {{{body}}}
 
   </main>
@@ -88,7 +89,7 @@
 
 
   </div>
-
+{{!-- Options to sign for Sport Event --}}
   <form class="addEventForm" id="addEventForm" class="addEventForm">
     <div>
       <label class="eventText" for="sport date">Select date, sport, and location below:</label>
@@ -106,7 +107,7 @@
       <h2 id="picksport"></h2>
     </div>
 
-
+{{!-- Different Locations --}}
     <div class="sportslocation">
       <select name="locationcreate" id="locationcreate">
         <option value="">--select location--</option>
@@ -127,7 +128,7 @@
 
 
 
-  <!-- **** Footer ****-->
+  <!-- **** Footer with Contact Information ****-->
   <footer class="page-footer white lighten-4">
     <div class="container ">
       <div class="row">
