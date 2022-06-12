@@ -4,12 +4,19 @@
     </div>
 
     {{!-- {{#if loggedIn}} --}}
-        <button class="event-signup" id=("event-number"+{{id}})>Sign Up</button>
+        <button class="event-signup" id={{id}}>Sign Up</button>
      {{!-- {{/if}} --}}
     <div class="bottom" id="list-of-events">
         <p>{{location.name}}</p>
         <p>{{format_date date}}</p>
     </div>
+    <div>People who Seeked this Event and Signed Up</div>
+    <div>
+    {{#each scheduledParticipants}}
+    {{> participants}}
+    {{/each}}
+</div>
+    
 </div>
 
 

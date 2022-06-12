@@ -1,5 +1,3 @@
-//const { json } = require("express/lib/response");
-
 async function addEventFormHandler(event) {
     event.preventDefault();
 
@@ -30,8 +28,6 @@ async function addEventFormHandler(event) {
         } else {
             alert(response.statusText);
         }
-   
-
     }
 
 document.querySelector('.addEventForm').addEventListener('submit', addEventFormHandler);
