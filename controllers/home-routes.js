@@ -143,11 +143,12 @@ router.get('/softball', async (req, res) => {
       include: [
         {
           model: sports,
-          attributes: ['name']
+          attributes: ['name', 'requiredParticipants', 'description'] 
+          
         },
         {
           model: location,
-          attributes: ['name', 'requiredParticipants', 'description'] 
+          attributes: ['name']
         }, 
         {
           model: scheduledParticipants,
