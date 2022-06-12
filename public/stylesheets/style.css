@@ -286,9 +286,6 @@ button:hover {
     background-color: #0979ad;
 }
 
-/* Media Queries Info */
-@media screen and (min-width: 1300px){
-}
 
 /* .row {
   color: red;
@@ -401,4 +398,45 @@ select {
 .sports li:hover {
     background-color: #0979ad;
     color: white;
+}
+
+/* Media Queries Info */
+
+@media screen and (max-width: 768px) {
+    .headerTitle {
+        color: #216583;
+        font-size: 50px; 
+    }
+
+    .hero {
+    display: flex;
+    justify-content: wrap;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-position: center;
+    align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
+    background-color: #216583;
+    color: #f7be16;
+    font-size: 22px;
+    }
+
+    .quote {
+        font-size: 22px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #216583;
+    }
+
+    .homeText, .loginText {
+        font-size: 16px;
+        color: #f7be16;
+    }
+
+
 }

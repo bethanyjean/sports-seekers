@@ -29,14 +29,14 @@
         <!-- List item element-->
         <li>
           <!-- Anchor element -->
-          <a href="/" style="font-size: 16px;">Home</a>
+          <a class="homeText" href="/" style="font-size: 16px;">Home</a>
         </li>
         <li>
           {{#if loggedIn}}
           <a href="/logout" style="font-size: 16px;">Logout</a>
           {{else}}
           <!-- Otherwise, show a link to login -->
-          <a href="/login">Login</a>
+          <a class="loginText" href="/login">Login</a>
           {{/if}}
         </li>
       </ul>
