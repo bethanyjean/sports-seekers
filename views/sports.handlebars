@@ -1,7 +1,8 @@
 {{!-- Creating Expression that allows any created sports event to be transfer through this Sports Handlebar --}}
 {{!-- <div class="sportingEventsText"><h2>"This sport is:" {{sport_events.0.sports.name}}</h2></div> --}}
-<div class=“sportingEventsText”><h2>this is some text: {{sport_events.id}}</h2></div>
-
+<div class=“sportingEventsText”><h2>Events for: {{sport_events.0.sport.name}}</h2></div>
+<div class=“sportingEventsText”><h2>Description: {{sport_events.0.sport.description}}</h2></div>
+<div class=“sportingEventsText”><h2>Required Participants: {{sport_events.0.sport.requiredParticipants}}</h2></div>
 <div>
     {{#each sport_events}}
     {{> event-details}}

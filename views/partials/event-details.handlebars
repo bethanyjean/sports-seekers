@@ -10,6 +10,13 @@
         <p>{{location.name}}</p>
         <p>{{format_date date}}</p>
     </div>
+    <div>People who Seeked this Event and Signed Up</div>
+    <div>
+    {{#each scheduledParticipants}}
+    {{> participants}}
+    {{/each}}
+</div>
+    
 </div>
 
 

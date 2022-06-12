@@ -1,6 +1,6 @@
 const router = require('express').Router();
-// const sequelize = require('../config/connection');
-const { scheduledEvents, sports, location, scheduledParticipants } = require('../models');
+const sequelize = require('../config/connection');
+const { scheduledEvents, sports, location, scheduledParticipants, user } = require('../models');
 
 
 router.get('/', async (req, res) => {
@@ -25,7 +25,7 @@ router.get('/basketball', async (req, res) => {
       include: [
         {
           model: sports,
-          attributes: ['name']
+          attributes: ['name', 'requiredParticipants', 'description']
         },
         {
           model: location,
@@ -33,7 +33,11 @@ router.get('/basketball', async (req, res) => {
         }, 
         {
           model: scheduledParticipants,
-          attributes: ['user_id']
+          attributes: ['user_id'],
+          include: {
+            model: user,
+            attributes: ['email']
+          }
         }
       ],
     });
@@ -60,7 +64,7 @@ router.get('/football', async (req, res) => {
       include: [
         {
           model: sports,
-          attributes: ['name']
+          attributes: ['name', 'requiredParticipants', 'description']
         },
         {
           model: location,
@@ -68,7 +72,11 @@ router.get('/football', async (req, res) => {
         }, 
         {
           model: scheduledParticipants,
-          attributes: ['user_id']
+          attributes: ['user_id'],
+          include: [{
+            model: user,
+            attributes: ['email']
+          }]
         }
       ],
     });
@@ -95,7 +103,7 @@ router.get('/soccer', async (req, res) => {
       include: [
         {
           model: sports,
-          attributes: ['name']
+          attributes: ['name', 'requiredParticipants', 'description']
         },
         {
           model: location,
@@ -103,7 +111,11 @@ router.get('/soccer', async (req, res) => {
         }, 
         {
           model: scheduledParticipants,
-          attributes: ['user_id']
+          attributes: ['user_id'],
+          include: {
+            model: user,
+            attributes: ['email']
+          }
         }
       ],
     });
@@ -135,11 +147,15 @@ router.get('/softball', async (req, res) => {
         },
         {
           model: location,
-          attributes: ['name'] 
+          attributes: ['name', 'requiredParticipants', 'description'] 
         }, 
         {
           model: scheduledParticipants,
-          attributes: ['user_id']
+          attributes: ['user_id'],
+          include: {
+            model: user,
+            attributes: ['email']
+          }
         }
       ],
     });
