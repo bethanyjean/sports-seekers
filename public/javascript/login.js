@@ -16,7 +16,7 @@ async function loginFormHandler(event) {
 
         if (response.ok) {
             console.log("Login OK")
-            document.location.replace('/');
+            document.location.replace('hompeage');
         } else {
             console.log("Login Failed")
             alert(response.statusText);
@@ -42,7 +42,7 @@ async function signupFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('homepage');
+            document.location.replace('/');
         } else {
             alert(response.statusText);
         }
