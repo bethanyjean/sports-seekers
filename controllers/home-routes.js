@@ -1,6 +1,6 @@
 const router = require('express').Router();
 // const sequelize = require('../config/connection');
-const { scheduledEvents, sports, location } = require('../models');
+const { scheduledEvents, sports, location, scheduledParticipants } = require('../models');
 
 
 router.get('/', async (req, res) => {
@@ -19,6 +19,7 @@ router.get('/basketball', async (req, res) => {
     const events = await scheduledEvents.findAll({
       where: {sports_id: 5},
       attributes: [
+        'id',
         'date'
       ],
       include: [
@@ -29,13 +30,17 @@ router.get('/basketball', async (req, res) => {
         {
           model: location,
           attributes: ['name'],
-        },
+        }, 
+        {
+          model: scheduledParticipants,
+          attributes: ['user_id']
+        }
       ],
     });
   var eventsArray = events.map((event1) => event1.get({plain:true}))
   console.log(eventsArray);
   res.render('sports', {
-    // loggedIn: req.session.loggedIn,
+    loggedIn: req.session.loggedIn,
     sport_events: eventsArray
   });
 } catch (err) {
@@ -49,6 +54,7 @@ router.get('/football', async (req, res) => {
     const events = await scheduledEvents.findAll({
       where: {sports_id: 2},
       attributes: [
+        'id',
         'date'
       ],
       include: [
@@ -59,13 +65,17 @@ router.get('/football', async (req, res) => {
         {
           model: location,
           attributes: ['name'],
-        },
+        }, 
+        {
+          model: scheduledParticipants,
+          attributes: ['user_id']
+        }
       ],
     });
   var eventsArray = events.map((event1) => event1.get({plain:true}))
   console.log(eventsArray);
   res.render('sports', {
-    // loggedIn: req.session.loggedIn,
+    loggedIn: req.session.loggedIn,
     sport_events: eventsArray
   });
 } catch (err) {
@@ -79,6 +89,7 @@ router.get('/soccer', async (req, res) => {
     const events = await scheduledEvents.findAll({
       where: {sports_id: 1},
       attributes: [
+        'id',
         'date'
       ],
       include: [
@@ -89,13 +100,17 @@ router.get('/soccer', async (req, res) => {
         {
           model: location,
           attributes: ['name'],
-        },
+        }, 
+        {
+          model: scheduledParticipants,
+          attributes: ['user_id']
+        }
       ],
     });
   var eventsArray = events.map((event1) => event1.get({plain:true}))
   console.log(eventsArray);
   res.render('sports', {
-    // loggedIn: req.session.loggedIn,
+    loggedIn: req.session.loggedIn,
     sport_events: eventsArray
   });
 } catch (err) {
@@ -110,6 +125,7 @@ router.get('/softball', async (req, res) => {
     const events = await scheduledEvents.findAll({
       where: {sports_id: 3},
       attributes: [
+        'id',
         'date'
       ],
       include: [
@@ -120,13 +136,17 @@ router.get('/softball', async (req, res) => {
         {
           model: location,
           attributes: ['name'] 
-        },
+        }, 
+        {
+          model: scheduledParticipants,
+          attributes: ['user_id']
+        }
       ],
     });
   var eventsArray = events.map((event1) => event1.get({plain:true}))
   console.log(eventsArray);
   res.render('sports', {
-    // loggedIn: req.session.loggedIn,
+    loggedIn: req.session.loggedIn,
     sport_events: eventsArray
   });
 } catch (err) {
@@ -136,9 +156,9 @@ router.get('/softball', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  // if (req.session.loggedIn) {
+  if (req.session.loggedIn) {
     res.render('login');
-  // }
+  }
 });
 router.get('/logout',(req, res) =>{
   res.render('homepage');
