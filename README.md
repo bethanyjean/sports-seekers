@@ -39,7 +39,7 @@ Purpose:
 This group project focused on creating and executing a full stack web application to help users to find sporting events they can participate in, using a more efficient and streamlined process. The application allows users to search for local sporting events such as basketball, football, softball, and soccer at various locations. 
 __________________________________________________________________
 The web page includes:
-“Home”, “Login/Logout”, “Fun” buttons
+“Home”, “Login/Logout”
 “Sporting Events” button which allows the user to select a sport
 “Calendar” which allows the user to create an event for the selected sport based on location and date/time
 __________________________________________________________________
