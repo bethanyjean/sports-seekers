@@ -51,7 +51,7 @@ Beta screenshot of our Wireframe:
 ![screenshot](/public/images/Wireframe%20Beta%20.png)
 
 Website Outlook
-![screenshot](/public/images/Top%20Page.png)
+![screenshot](/public/images/Front%20Page%20New%20.png)
 ![screenshot](/public/images/Bottom%20Page.png)
 ![screenshot](/public/images/Login%20Page.png)
 
