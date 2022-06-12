@@ -1,30 +1,9 @@
-async function signupEventFormHandler(event) {
-    event.preventDefault();
 
-    const username = document.querySelector('#').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
+// async function signupEvent(event) {
+//     event.preventDefault();
+// const userid = session.user.userid
 
-        const response = await fetch('/api/users', {
-            method: 'post',
-            body: JSON.stringify({
-                username,
-                email,
-                password
-            }),
-            headers: { 'Content-Type': 'application/json' }
-        });
-
-        if (response.ok) {
-            document.location.replace('/dashboard');
-        } else {
-            alert(response.statusText);
-        }
-    }
-
-
-
-// $(".event-signup").on("click", "btn", function() {
-//     // get current text of p element
-    
 //   });
+
+
+//   document.getElementsByClassName("event-signup").addEventListener("click",signupEvent(sport_events))

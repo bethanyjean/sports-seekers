@@ -29,14 +29,14 @@
         <!-- List item element-->
         <li>
           <!-- Anchor element -->
-          <a href="/" style="font-size: 16px;">Home</a>
+          <a class="homeText" href="/" style="font-size: 16px;">Home</a>
         </li>
         <li>
           {{#if loggedIn}}
           <a href="/logout" style="font-size: 16px;">Logout</a>
           {{else}}
           <!-- Otherwise, show a link to login -->
-          <a href="/login">Login</a>
+          <a class="loginText" href="/login">Login</a>
           {{/if}}
         </li>
       </ul>
@@ -92,7 +92,7 @@
 {{!-- Options to sign for Sport Event --}}
   <form class="addEventForm" id="addEventForm" class="addEventForm">
     <div>
-      <label class="eventText" for="sport date">Select date, sport, and location below:</label>
+      <label class="eventText" for="sport date">Select date, sport, and location to create your event:</label>
       <input type="date" id="dateCreate" />
     </div>
 
