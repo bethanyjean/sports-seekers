@@ -3,7 +3,7 @@ async function signupEvent(event) {
 const response = await fetch('/api/scheduledParticipants', {
     method: 'post',
     body:JSON.stringify({
-        user_id: session.user.user_id,
+        user_id: session.user_id,
         event_id: sport_events.id
     }),
     headers: {"Content-Type": 'application/json'}

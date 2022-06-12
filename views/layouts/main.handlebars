@@ -33,7 +33,7 @@
         </li>
         <li>
           {{#if loggedIn}}
-          <a href="/logout" style="font-size: 16px;">Logout</a>
+          <a href="/login" style="font-size: 16px;">Logout</a>
           {{else}}
           <!-- Otherwise, show a link to login -->
           <a class="loginText" href="/login">Login</a>
@@ -175,9 +175,7 @@
     <script src="javascript/script.js"></script>
     <script src="javascript/event_creation.js"></script>
     <script src="javascript/event_signup.js"></script>
-
-
-
+    
     {{!--
     <script>
       $("#evoCalendar").evoCalendar();
