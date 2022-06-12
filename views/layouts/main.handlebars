@@ -1,174 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports-seekers!</title>
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
-    <link rel="stylesheet" type="text/css" href="stylesheets/evo-calendar.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/evo-calendar.royal-navy.css">
-    <link rel="stylesheet" href="stylesheets/style.css" /> 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports-seekers!</title>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/evo-calendar.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/evo-calendar.royal-navy.css">
+  <link rel="stylesheet" href="stylesheets/style.css" />
 
 </head>
+
 <body>
-    <header>
-        <h1>
-            <a href="/" class="headerTitle">
-              Sport-Seekers
-            </a>
-        </h1>
-          <nav>
-            <!-- Unordered list element -->
-            <ul>
-              <!-- List item element-->
-              <li>
-                <!-- Anchor element -->
-                <a href="/" style="font-size: 16px;">Home</a>
-              </li>
-              <li>
-                 {{#if loggedIn}}
-                  <a href="/logout" style="font-size: 16px;">Logout</a>
-                 {{else}}
-                  <!-- Otherwise, show a link to login -->
-                  <a href="/login">Login</a>
-                {{/if}}
+  {{!-- Header that shows tabs for Home & Login Button --}}
+  <header>
+    <h1>
+      <a href="/" class="headerTitle">
+        Sport-Seekers
+      </a>
+    </h1>
+    <nav>
+      <!-- Unordered list element -->
+      <ul>
+        <!-- List item element-->
+        <li>
+          <!-- Anchor element -->
+          <a href="/" style="font-size: 16px;">Home</a>
+        </li>
+        <li>
+          {{#if loggedIn}}
+          <a href="/logout" style="font-size: 16px;">Logout</a>
+          {{else}}
+          <!-- Otherwise, show a link to login -->
+          <a href="/login">Login</a>
+          {{/if}}
+        </li>
+      </ul>
+    </nav>
+  </header>
+{{!-- Quote for the Page --}}
+  <section class="hero">
+    <h3 class="quote">"Champions keep playing until they get it right."</h3>
+  </section>
 
-              </li>
-              <li>
-                <a href="#" style="font-size: 16px;">Fun</a>
-              </li>
-              <li>
-                <a href="#" style="font-size: 16px;">Contact Us</a>
-              </li>
-            </ul>
-          </nav>
-    </header>
 
-    <section class="hero">
-      <h3 class="quote">"Champions keep playing until they get it right."</h3>
-    </section>
+  <main class="row">
+    <div class="sportingEventsText">
+      <h2>Sporting Events</h2>
+    </div>
 
-    
-    <main class="row">
-      <div class="sportingEventsText"><h2>Sporting Events</h2></div>
-  
 
-      <div class="create row">
-        
+    <div class="create row">
 
-        <div class="col s12 m6 l3">
-          <a href="/basketball"><img src="images/basketball.png" alt="" class="sport-balls"></a>
-        </div> 
-    
-        <div class="col s12 m6 l3">
-          <a href="/football"><img src="images/football.png" alt="" class="sport-balls"></a>
-        </div>
-          
-        <div class="col s12 m6 l3">
-          <a href="/soccer"><img src="images/soccer.png" alt="" class="sport-balls"></a>
-        </div>
-
-        <div class="col s12 m6 l3">
-          <a href="/softball"><img src="images/softball.png" alt="" class="sport-balls custom-ball"></a>
-        </div>
-      
+{{!-- Cards that displays different sports --}}
+      <div class="col s12 m6 l3">
+        <a href="/basketball"><img src="images/basketball.png" alt="" class="sport-balls"></a>
       </div>
 
-      {{{body}}}
-      
-    </main>
-    
-    {{!-- <div class="col s4">
-      <div class="card">
-        <h6>Interested in Sponsoring an Event? Call us: 555-555-5555</h6>
+      <div class="col s12 m6 l3">
+        <a href="/football"><img src="images/football.png" alt="" class="sport-balls"></a>
       </div>
-    </div> --}}
 
-  
+      <div class="col s12 m6 l3">
+        <a href="/soccer"><img src="images/soccer.png" alt="" class="sport-balls"></a>
+      </div>
+
+      <div class="col s12 m6 l3">
+        <a href="/softball"><img src="images/softball.png" alt="" class="sport-balls custom-ball"></a>
+      </div>
+
+    </div>
+{{!-- Expressions that allows handlebar to be sent to the body --}}
+    {{{body}}}
+
+  </main>
+
+  {{!-- <div class="col s4">
+    <div class="card">
+      <h6>Interested in Sponsoring an Event? Call us: 555-555-5555</h6>
+    </div>
+  </div> --}}
 
 
-</div>
 
-<form class="addEventForm" id="addEventForm" class="addEventForm">  
-  <div>
-    <label class="eventText" for="sport date">Select date, sport, and location below:</label>
-    <input type="date" id="dateCreate" />
+
   </div>
-  
-<div class="sports1">
-  <select name="sportscreate" id="sportscreate">
-  <option value="">--select sport--</option>
-  <option value=5>basketball</option>
-  <option value=2>football</option>
-  <option value=1>soccer</option>
-  <option value=3>softball</option>
-</select>
-<h2 id="picksport"></h2>   
-  </div>
+{{!-- Options to sign for Sport Event --}}
+  <form class="addEventForm" id="addEventForm" class="addEventForm">
+    <div>
+      <label class="eventText" for="sport date">Select date, sport, and location below:</label>
+      <input type="date" id="dateCreate" />
+    </div>
 
+    <div class="sports1">
+      <select name="sportscreate" id="sportscreate">
+        <option value="">--select sport--</option>
+        <option value=5>basketball</option>
+        <option value=2>football</option>
+        <option value=1>soccer</option>
+        <option value=3>softball</option>
+      </select>
+      <h2 id="picksport"></h2>
+    </div>
 
-  <div class="sportslocation">
-  <select name="locationcreate" id="locationcreate">
-  <option value="">--select location--</option>
-  <option value=1>griffin field</option>
-  <option value=3>Ham Court</option>
-  <option value=4>Marina Park</option>
-  <option value=2>Tyler's Complex</option>
-</select>
-<h2 id="picklocation"></h2>   
- </div>
-  <div>
-    <button id="createEventButton" class="createEventButton hover">Create Sport Event</button>
-  </div>
+{{!-- Different Locations --}}
+    <div class="sportslocation">
+      <select name="locationcreate" id="locationcreate">
+        <option value="">--select location--</option>
+        <option value=1>griffin field</option>
+        <option value=3>Ham Court</option>
+        <option value=4>Marina Park</option>
+        <option value=2>Tyler's Complex</option>
+      </select>
+      <h2 id="picklocation"></h2>
+    </div>
+    <div>
+      <button id="createEventButton" class="createEventButton hover">Create Sport Event</button>
+    </div>
   </form>
-  
 
-    <div id="calendar"></div>
-    
 
-		
-    <!-- **** Footer ****-->		
-	<footer class="page-footer white lighten-4">
-		<div class="container ">
-			<div class="row">
-				<div class="col l6 s12">
-					<h5 class="black-text">Sports Seekers</h5>
-					<p class="blue-grey-text text-darken-1">
-						Sponsor an Event Today
-					</p>
-					<p class="blue-grey-text text-darken-1">
-						Find Pickup Games Around You
-					</p>							
-				</div>
-			</div>
-		</div>
-		<div class="footer-copyright grey darken-4">
-			<div class="container">
-				© 2022 Sports Seekers
-			</div>
-		</div>
-	</footer>
+  <div id="calendar"></div>
 
-  
-  <div> 
 
-    {{!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
+
+  <!-- **** Footer with Contact Information ****-->
+  <footer class="page-footer white lighten-4">
+    <div class="container ">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="black-text">Sports Seekers</h5>
+          <p class="blue-grey-text text-darken-1">
+            Sponsor an Event Today
+          </p>
+          <p class="blue-grey-text text-darken-1">
+            Find Pickup Games Around You
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright grey darken-4">
+      <div class="container">
+        © 2022 Sports Seekers
+        <p>
+          Any questions or concerns before signing up?
+          <br />
+          Feel free to contact us!
+        </p>
+        <address>
+          105 Broad Street Road <br />
+          Richmond, VA 23227 <br />
+          P: 540.894.SEEK <br />
+          E: <a href="mailto:sportseekers@gmail.com">Email Link</a>
+        </address>
+      </div>
+    </div>
+  </footer>
+
+
+  <div>
+
+    {{!--
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script>
-    {{!-- <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script> --}}
+    {{!--
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+      integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script> --}}
 
     <script src="javascript/script.js"></script>
-<script src="javascript/event_creation.js"></script>
-<script src="javascript/event_signup.js"></script>
-    
+    <script src="javascript/event_creation.js"></script>
+    <script src="javascript/event_signup.js"></script>
 
 
-{{!-- <script>
-  $("#evoCalendar").evoCalendar();
-</script> --}}
+
+    {{!--
+    <script>
+      $("#evoCalendar").evoCalendar();
+    </script> --}}
 
 </body>
+
 </html>

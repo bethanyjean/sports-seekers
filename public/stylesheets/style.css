@@ -265,13 +265,34 @@ ul {
 .picture-container {
     width:100%;
 }
+/* Style for the Login In Page */
 
+.login-box {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #216583;
+}
+
+button {
+    background-color: #225ca3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+button:hover {
+    background-color: #0979ad;
+}
+
+/* Media Queries Info */
 @media screen and (min-width: 1300px){
 }
 
-.row {
+/* .row {
   color: red;
-}
+} */
 
 /* Event Types */
 
