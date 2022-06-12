@@ -160,7 +160,7 @@ align-items: center;
 background-color: #216583;
 }
 
-button {
+.loginButton {
     background-color: lightgray;
     color: #216583;
     font-weight: bold;
@@ -168,15 +168,25 @@ button {
     border-radius: 5px;
   }
 
-button:hover {
+.loginButton:hover {
+    background-color: #216583;
+    color: #f7be16;
+}
+
+.signupButton {
+    background-color: lightgray;
+    color: #216583;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.signupButton:hover {
     background-color: #216583;
     color: #f7be16;
 }
 
 
-/* .row {
-  color: red;
-} */
 
 /* Event Types */
 
@@ -222,7 +232,6 @@ button:hover {
   
   .card .bottom p {
     text-align: left;
-    height: 80px;
     width: 100%;
     box-sizing: border-box;
     margin: 0;
@@ -287,6 +296,30 @@ select {
     color: white;
 }
 
+.event-signup {
+    background-color: lightgray;
+    color: #216583;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 17px;
+}
+
+.event-signup:hover {
+    background-color: #216583;
+    color: #f7be16;
+}
+
+.bulletinBoardImages {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.login-box {
+    background-color: #f7be16;
+    color: #216583;
+}
+
 /* Media Queries Info */
 
 @media screen and (max-width: 768px) {
@@ -322,7 +355,7 @@ select {
         background-color: #216583;
     }
 
-    .homeText, .loginText {
+    .homeText, .loginText, .logoutText {
         font-size: 16px;
         color: #f7be16;
     }
@@ -332,5 +365,36 @@ select {
         width: 125px;
     }
 
+    .localEventsRow {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bulletinBoardImages {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+    .sport-balls {
+        visibility: hidden;
+    }
+
+    .create {
+        background-color: #f7be16;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .bulletinBoardImages {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    
 
 }
