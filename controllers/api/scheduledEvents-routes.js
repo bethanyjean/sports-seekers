@@ -23,7 +23,11 @@ router.get('/', (req, res) => {
             }, 
             {
               model: scheduledParticipants,
-              attributes: ['user_id']
+              attributes: ['user_id'],
+              include:  [{
+                model: user,
+                attributes: ['username']
+              }]
             }
           ] 
     })
@@ -34,7 +38,7 @@ router.get('/', (req, res) => {
     });
 });
 
-//Retrieves all events based on sportsid
+//Retrieves all events based on location
 router.get('/location/:location_id', (req, res) => {
   scheduledEvents.findAll({
     where: {
@@ -43,7 +47,6 @@ router.get('/location/:location_id', (req, res) => {
     attributes: [
       'id',
       'date',
-      // 'time',
     ],
     include: [
       {
@@ -54,11 +57,6 @@ router.get('/location/:location_id', (req, res) => {
         model: location,
         attributes: ['name']
       }
-      // {
-      //     model: user,
-      //     attributes: ['username'],
-      //     as: "coordinator"
-      // },
     ] 
 })
 .then(dbscheduledEventsdata => {
@@ -94,11 +92,6 @@ router.get('/sports/:sports_id', (req, res) => {
         model: location,
         attributes: ['name']
       }
-      // {
-      //     model: user,
-      //     attributes: ['username'],
-      //     as: "coordinator"
-      // },
     ] 
 })
 .then(dbscheduledEventsdata => {
@@ -134,11 +127,6 @@ router.get('/:id', (req, res) => {
           model: location,
           attributes: ['name']
         }
-        // {
-        //     model: user,
-        //     attributes: ['username'],
-        //     as: "coordinator"
-        // },
       ] 
 })
 .then(dbscheduledEventsdata => {

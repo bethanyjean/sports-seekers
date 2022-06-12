@@ -1,9 +1,9 @@
-async function signupEvent(event) {
-    event.preventDefault();
+async function signupEvent(id) {
+    console.log(id)
 const response = await fetch('/api/scheduledParticipants', {
     method: 'post',
     body:JSON.stringify({
-        user_id: session.user.user_id,
+        user_id: session.user_id,
         event_id: sport_events.id
     }),
     headers: {"Content-Type": 'application/json'}
@@ -19,5 +19,9 @@ const response = await fetch('/api/scheduledParticipants', {
 
 
 document.querySelectorAll('.event-signup').forEach(item=> {
-    item.addEventListener('click', signupEvent)
+    item.addEventListener('click', 
+    function (getID) {
+        var index = getID.target.id.slice(-1);
+        signupEvent(index);
+    })
 })

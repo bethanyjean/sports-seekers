@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     scheduledParticipants.findAll({
         attributes: [
             'id',
-            'username',
+            'user_id',
             'scheduledEvents_id'
           ],
     })
