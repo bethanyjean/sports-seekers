@@ -51,15 +51,15 @@ Beta screenshot of our Wireframe:
 ![screenshot](/public/images/Wireframe%20Beta%20.png)
 
 Website Outlook
-![screenshot](/public/images/Front%20Page%20New%20.png)
-![screenshot](/public/images/Bottom%20Page.png)
-![screenshot](/public/images/Login%20Page.png)
+![screenshot](/public/images/SportSeekersTop.png)
+![screenshot](/public/images/SportSeekersMiddle.png)
+![screenshot](/public/images/SportSeekersCalendar.png)
 
 __________________________________________________________________
 
 Deployed Link:
-https://git.heroku.com/serene-beyond-42809.git 
 
+https://serene-beyond-42809.herokuapp.com/
 
 GitHub Repo Link: 
 
