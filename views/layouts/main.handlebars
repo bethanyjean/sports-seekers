@@ -33,7 +33,10 @@
         </li>
         <li>
           {{#if loggedIn}}
-          <a href="/logout" style="font-size: 16px;">Logout</a>
+
+          <a class="logoutText" href="/logout" style="font-size: 16px;">Logout</a>
+
+
           {{else}}
           <!-- Otherwise, show a link to login -->
           <a class="loginText" href="/login">Login</a>
@@ -152,10 +155,10 @@
           Feel free to contact us!
         </p>
         <address>
-          105 Broad Street Road <br />
+          105 Seeker Way <br />
           Richmond, VA 23227 <br />
-          P: 540.894.SEEK <br />
-          E: <a href="mailto:sportseekers@gmail.com">Email Link</a>
+          Phone: 804-894-SEEK <br />
+          Email: <a href="mailto:sportseekers@gmail.com">sportseekers@gmail.com</a>
         </address>
       </div>
     </div>
@@ -175,9 +178,7 @@
     <script src="javascript/script.js"></script>
     <script src="javascript/event_creation.js"></script>
     <script src="javascript/event_signup.js"></script>
-
-
-
+    
     {{!--
     <script>
       $("#evoCalendar").evoCalendar();

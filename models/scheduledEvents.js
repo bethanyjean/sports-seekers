@@ -13,13 +13,6 @@ scheduledEvents.init(
             primaryKey: true,
             autoIncrement: true
         },
-        // user_id: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'user',
-        //         key: 'id'
-        //     }
-        // },
         location_id: {
             type: DataTypes.INTEGER,
             references: {
@@ -39,10 +32,6 @@ scheduledEvents.init(
             allowNull: false
             
         },
-        // time: {
-        //     type:DataTypes.TIME,
-        //     allowNull: false
-        // },
     },
     {
         sequelize,

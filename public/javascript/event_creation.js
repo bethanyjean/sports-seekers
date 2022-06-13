@@ -28,9 +28,6 @@ async function addEventFormHandler(event) {
         } else {
             alert(response.statusText);
         }
-        
-   
-
     }
 
 document.querySelector('.addEventForm').addEventListener('submit', addEventFormHandler);
