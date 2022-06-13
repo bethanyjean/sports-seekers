@@ -1,6 +1,6 @@
 # sports-meetup
 
-- Creating a full stack development using the back end features. 
+Creating a full stack development using the back end features. 
 
 Criteria Standards: 
 Your project should fulfill the following requirements:
@@ -58,7 +58,7 @@ Website Outlook
 __________________________________________________________________
 
 Deployed Link:
-https://git.heroku.com/serene-beyond-42809.git 
+[https://git.heroku.com/serene-beyond-42809](https://serene-beyond-42809.herokuapp.com/)
 
 
 GitHub Repo Link: 
